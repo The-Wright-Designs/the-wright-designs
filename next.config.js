@@ -4,6 +4,7 @@ const nextConfig = {
   images: {
     deviceSizes: [425, 800, 1400],
     imageSizes: [425, 800, 1400],
+    qualities: [35, 60, 75],
   },
 };
 

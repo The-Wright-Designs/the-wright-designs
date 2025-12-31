@@ -87,7 +87,7 @@ const RecentProjectsWebsiteScroller = ({
         alt={alt}
         quality={35}
         loading={loading ? "eager" : "lazy"}
-        sizes="(max-width:425px) 75vw, (max-width:800px) 50vw, 50vw"
+        sizes="244px"
         className="h-auto"
       />
     </div>
