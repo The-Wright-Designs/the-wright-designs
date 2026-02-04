@@ -20,7 +20,7 @@ const RecentProjectsApps = () => {
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     if (currentRef) {
@@ -35,23 +35,11 @@ const RecentProjectsApps = () => {
   }, []);
 
   return (
-    <>
-      <section className="mb-10 overflow-x-scroll">
-        <div ref={scrollRef} className="min-w-[1000px]">
-          <RecentProjectsAppsTable />
-        </div>
-      </section>
-
-      <Button
-        url="https://www.chadwright.dev/projects/apps"
-        target="_blank"
-        buttonColor="blue"
-        outline
-        cssClasses="w-full mb-14 tablet:mx-auto tablet:w-auto"
-      >
-        Detailed app archive
-      </Button>
-    </>
+    <section className="mb-14 overflow-x-scroll">
+      <div ref={scrollRef} className="min-w-[1000px]">
+        <RecentProjectsAppsTable />
+      </div>
+    </section>
   );
 };
 

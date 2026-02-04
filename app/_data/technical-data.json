@@ -1,35 +1,27 @@
 {
-  "techStack": [
-    "Next.js",
-    "Node.js",
-    "Git",
-    "Firebase",
-    "AWS",
-    "Google Cloud Console",
-    "Vercel",
-    "REST",
-    "GraphQL",
-    "Webflow",
-    "WordPress"
-  ],
-  "designStack": ["Figma", "Adobe XD", "Photoshop", "Premier Pro"],
   "projectsList": {
     "apps": [
       {
-        "client": "Personal project",
-        "title": "Children's story & image generator app",
-        "description": "This app uses AI to dynamically generate stories and accompanying images based on a variety of user prompts. Designed for parents of young children (aged 1-9), the app aims to offer a fun and engaging storytelling experience. Users will have the ability to save favourite stories, create profiles for multiple children, and more.",
-        "year": 2024,
-        "tech": ["Next.js", "Node.js", "Firebase", "OpenAI API"],
+        "client": "Carevita",
+        "title": "Retirement resident management app",
+        "description": "A centralized platform that eliminated paper-based records for 100+ staff across multiple retirement facilities nationwide. The app enables efficient resident management, including health notes, meal plans, and document access, significantly improving operational efficiency and information accessibility for care teams.",
+        "year": 2025,
         "status": "In development",
-        "image": "/assets/the-wright-designs-logo-square.jpg"
+        "image": "/assets/images/our-clients/carevita-logo.png"
+      },
+      {
+        "client": "Yellow Brick Cinema",
+        "title": "Daily competitor report automation",
+        "description": "This automated reporting system compiles daily data on our client's competitors' YouTube channels, including new video uploads, view counts, and subscriber growth. The system generates a comprehensive report and emails it to the client each morning, enabling them to stay informed about their competitive landscape without manual effort.",
+        "year": 2025,
+        "status": "Completed",
+        "image": "/assets/images/our-clients/yellow-brick-cinema-logo.jpg"
       },
       {
         "client": "Bean Tree Coffee Shop",
         "title": "Coffee shop loyalty program",
         "description": "This database driven system tracks customers' qualifying purchases using their phone numbers. When a customer reaches a reward threshold, the staff will be notified and a discount code will be generated. The customer can then use this code at the POS to receive a free item. After redeeming the code, the system resets, allowing customers to continue earning rewards.",
         "year": 2024,
-        "tech": ["Node.js", "Firebase", "Shopify Admin API"],
         "status": "Completed",
         "image": "/assets/images/our-clients/bean-tree-logo.png"
       },
@@ -38,7 +30,6 @@
         "title": "Email data capture automation",
         "description": "This email data capture system streamlines our client's photography storefront operations by automatically parsing order summary emails and updating a Google Sheet with relevant order information. The system is designed to integrate seamlessly with the client's existing workflow, significantly reducing the time spent on manual data entry.",
         "year": 2024,
-        "tech": ["Apps Script", "Google Cloud Console"],
         "status": "Completed",
         "image": "/assets/images/our-clients/louann-waters-photography-logo.png"
       },
@@ -47,21 +38,66 @@
         "title": "Video subtitle translation automation",
         "description": "This system dramatically streamlines our client's YouTube video management process. Previously, the client's team spent hours daily manually inputting subtitles in 20 different languages. Our automated solution now enables them to update subtitles in seconds, freeing up their staff to focus on other critical tasks.",
         "year": 2023,
-        "tech": ["Node.js", "YouTube API"],
         "status": "Completed",
         "image": "/assets/images/our-clients/yellow-brick-cinema-logo.jpg"
       }
     ],
     "websites": [
       {
+        "title": "Robberg Pharmacy",
+        "url": "https://www.robbergpharmacy.co.za",
+        "image": {
+          "mobile": "",
+          "desktop": "",
+          "desktopSmall": {
+            "jpg": "",
+            "webp": ""
+          },
+          "scrollImage": ""
+        }
+      },
+      {
+        "title": "The Sentinel News",
+        "url": "https://www.sentinelnews.com.au",
+        "image": {
+          "mobile": "",
+          "desktop": "",
+          "desktopSmall": {
+            "jpg": "",
+            "webp": ""
+          },
+          "scrollImage": ""
+        }
+      },
+      {
+        "title": "Magnitude Apps",
+        "url": "https://magnitudeapps.com",
+        "image": {
+          "mobile": "",
+          "desktop": "",
+          "desktopSmall": {
+            "jpg": "",
+            "webp": ""
+          },
+          "scrollImage": ""
+        }
+      },
+      {
+        "title": "La Luna Boutique",
+        "url": "https://lalunaplett.co.za",
+        "image": {
+          "mobile": "",
+          "desktop": "",
+          "desktopSmall": {
+            "jpg": "",
+            "webp": ""
+          },
+          "scrollImage": ""
+        }
+      },
+      {
         "title": "The Lookout Centre",
         "url": "https://www.lookoutcentre.co.za/",
-        "year": 2025,
-        "techSummary": ["Next.js", "Node.js"],
-        "techExtended": ["Next.js", "Node.js", "Vercel"],
-        "design": ["Figma"],
-        "repo": "https://github.com/chadwright101/lookout.git",
-        "figmaLink": "https://www.figma.com/design/uJa7Mq8U2vPMS8egh21q2r/lookout-centre?node-id=193-207&t=VgQZv44VPycxyDHn-1",
         "image": {
           "mobile": "/assets/images/screenshots/lookout-centre-mobile.png",
           "desktop": "/assets/images/screenshots/lookout-centre-desktop.png",
@@ -75,12 +111,6 @@
       {
         "title": "Swift Tool Hire",
         "url": "https://www.swifttoolhire.co.za",
-        "year": 2025,
-        "techSummary": ["Next.js", "Node.js"],
-        "techExtended": ["Next.js", "Node.js", "Vercel"],
-        "design": ["Figma"],
-        "repo": "https://github.com/chadwright101/swift-tool-hire.git",
-        "figmaLink": "https://www.figma.com/design/zz83l5eWzSWwBwRErOFZGw/swift-tool-hire?node-id=5-21&t=FGdCQXikJCJccVyW-1",
         "image": {
           "mobile": "/assets/images/screenshots/swift-tool-hire-mobile.png",
           "desktop": "/assets/images/screenshots/swift-tool-hire-desktop.png",
@@ -94,12 +124,6 @@
       {
         "title": "Wild Compass Events",
         "url": "https://www.wildcompassevents.co.za",
-        "year": 2025,
-        "techSummary": ["Next.js", "Node.js"],
-        "techExtended": ["Next.js", "Node.js", "Vercel"],
-        "design": ["Figma"],
-        "repo": "https://github.com/chadwright101/wild-compass.git",
-        "figmaLink": "https://www.figma.com/design/FSWB5xwVltXeDsOirykh61/wild-compass-events?node-id=6-2&t=jAMNBiRTcqNZxGEf-1",
         "image": {
           "mobile": "/assets/images/screenshots/wild-compass-events-mobile.png",
           "desktop": "/assets/images/screenshots/wild-compass-events-desktop.png",
@@ -113,12 +137,6 @@
       {
         "title": "Arlene's Pool Services",
         "url": "https://www.arlenespools.co.za",
-        "year": 2025,
-        "techSummary": ["Next.js", "Node.js"],
-        "techExtended": ["Next.js", "Node.js", "Vercel"],
-        "design": ["Figma"],
-        "repo": "https://github.com/chadwright101/arlenes-pool-services.git",
-        "figmaLink": "https://www.figma.com/design/HaKkvH5dz7orRH0eDMyW1o/arlene's-pool-services?node-id=0-1&t=MHiaTmmZ5iGCXCro-1",
         "image": {
           "mobile": "/assets/images/screenshots/arlenes-pool-services-mobile.png",
           "desktop": "/assets/images/screenshots/arlenes-pool-services-desktop.png",
@@ -132,12 +150,6 @@
       {
         "title": "Big Day Event",
         "url": "https://www.bigdayevent.co.za",
-        "year": 2025,
-        "techSummary": ["Next.js", "Node.js"],
-        "techExtended": ["Next.js", "Node.js", "Firebase"],
-        "design": ["Figma"],
-        "repo": "https://github.com/chadwright101/big-day-event.git",
-        "figmaLink": "https://www.figma.com/design/cF3B5LkLggiY2tGhXQFXcZ/big-day-event?node-id=193-207&t=kZi11OroYfTxranx-1",
         "image": {
           "mobile": "/assets/images/screenshots/big-day-event-mobile.png",
           "desktop": "/assets/images/screenshots/big-day-event-desktop.png",
@@ -151,12 +163,6 @@
       {
         "title": "Laverick Ntuli Communications",
         "url": "https://laverickntuli.co.za",
-        "year": 2025,
-        "techSummary": ["Next.js", "Node.js"],
-        "techExtended": ["Next.js", "Node.js", "Vercel"],
-        "design": ["Figma"],
-        "repo": "https://github.com/chadwright101/laverick-ntuli.git",
-        "figmaLink": "https://www.figma.com/design/FqYlbH8oUolZLLmWHjsked/laverick-ntuli?node-id=0-1&t=p3YFB5Bpb4WqwUaq-1",
         "image": {
           "mobile": "/assets/images/screenshots/laverick-mobile.png",
           "desktop": "/assets/images/screenshots/laverick-desktop.png",
@@ -170,12 +176,6 @@
       {
         "title": "Tigo-Lee Professional Make-up Artist",
         "url": "https://tigolee.co.za",
-        "year": 2024,
-        "techSummary": ["Next.js", "Node.js"],
-        "techExtended": ["Next.js", "Node.js", "Vercel"],
-        "design": ["Figma"],
-        "repo": "https://github.com/chadwright101/tigo-lee.git",
-        "figmaLink": "https://www.figma.com/design/zFtcSwLTr2kryb102pLy5i/tigo-lee?node-id=5-21&t=ivHvcs0OD38F4xfw-1",
         "image": {
           "mobile": "/assets/images/screenshots/tigo-lee-mobile.png",
           "desktop": "/assets/images/screenshots/tigo-lee-desktop.png",
@@ -189,12 +189,6 @@
       {
         "title": "Real Brides Magazine",
         "url": "https://real-brides.vercel.app/",
-        "year": 2024,
-        "techSummary": ["Next.js", "Node.js"],
-        "techExtended": ["Next.js", "Node.js", "Vercel", "AWS"],
-        "design": ["Figma"],
-        "repo": "https://github.com/chadwright101/real-brides.git",
-        "figmaLink": "https://www.figma.com/design/UDi86xIDimGDUDDwSI4yoa/real-brides?node-id=2-2&t=nujtlxgsceSgOHDf-1",
         "image": {
           "mobile": "/assets/images/screenshots/real-brides-mobile.png",
           "desktop": "/assets/images/screenshots/real-brides-desktop.png",
@@ -208,9 +202,6 @@
       {
         "title": "Easy Done Concreting",
         "url": "https://www.easydoneconcreting.com.au/",
-        "year": 2024,
-        "techSummary": ["Webflow"],
-        "techExtended": ["Webflow"],
         "image": {
           "mobile": "/assets/images/screenshots/edc-mobile.png",
           "desktop": "/assets/images/screenshots/edc-desktop.png",
@@ -224,12 +215,6 @@
       {
         "title": "Adopt A Swimmer",
         "url": "https://www.adoptaswimmer.co.za",
-        "year": 2024,
-        "techSummary": ["Next.js", "Node.js"],
-        "techExtended": ["Next.js", "Node.js", "Vercel"],
-        "design": ["Figma", "Premier Pro"],
-        "repo": "https://github.com/chadwright101/adopt-a-swimmer.git",
-        "figmaLink": "https://www.figma.com/design/sxSGtzYPsy3gTCGGcUHkIN/adopt-a-swimmer?m=auto&t=dKJOMBDWEJ4qtCm7-6",
         "image": {
           "mobile": "/assets/images/screenshots/adopt-a-swimmer-mobile.png",
           "desktop": "/assets/images/screenshots/adopt-a-swimmer-desktop.png",
@@ -243,9 +228,6 @@
       {
         "title": "Sunny Coast Bathroom Renovations",
         "url": "https://www.scbr.com.au/",
-        "year": 2024,
-        "techSummary": ["Webflow"],
-        "techExtended": ["Webflow"],
         "image": {
           "mobile": "/assets/images/screenshots/scbr-mobile.png",
           "desktop": "/assets/images/screenshots/scbr-desktop.jpg",
@@ -259,19 +241,6 @@
       {
         "title": "Monk's Medical",
         "url": "https://www.monksmedical.com",
-        "year": 2024,
-        "techSummary": ["Next.js", "Node.js", "WordPress"],
-        "techExtended": [
-          "Next.js",
-          "Node.js",
-          "WordPress",
-          "REST",
-          "Vercel",
-          "AWS"
-        ],
-        "design": ["Figma"],
-        "repo": "https://github.com/chadwright101/monks-medical.git",
-        "figmaLink": "https://www.figma.com/design/2h8YiqQoRSFKlBGhDDrgiJ/Monk's-Medical?m=auto&t=dKJOMBDWEJ4qtCm7-6",
         "image": {
           "mobile": "/assets/images/screenshots/monks-medical-mobile.png",
           "desktop": "/assets/images/screenshots/monks-medical-desktop.jpg",
@@ -285,12 +254,6 @@
       {
         "title": "CareVita #fit",
         "url": "https://www.carevitafit.co.za",
-        "year": 2024,
-        "techSummary": ["Next.js", "Node.js", "Firebase"],
-        "techExtended": ["Next.js", "Node.js", "Firebase", "Vercel", "AWS"],
-        "design": ["Figma"],
-        "repo": "https://github.com/chadwright101/carevita-fit.git",
-        "figmaLink": "https://www.figma.com/design/531j5GkgnJ28jbdYT0pzgi/%23fit---carevita?m=auto&t=dKJOMBDWEJ4qtCm7-6",
         "image": {
           "mobile": "/assets/images/screenshots/carevita%23fit-mobile.png",
           "desktop": "/assets/images/screenshots/carevita%23fit-desktop.png",
@@ -304,12 +267,6 @@
       {
         "title": "CareVita",
         "url": "https://www.carevita.co.za",
-        "year": 2023,
-        "techSummary": ["Next.js", "Node.js"],
-        "techExtended": ["Next.js", "Node.js", "Vercel"],
-        "design": ["Figma", "Premier Pro"],
-        "repo": "https://github.com/chadwright101/carevita.git",
-        "figmaLink": "https://www.figma.com/design/Ds4Y6BbH4jzl069Ic0sqGp/carevita?m=auto&t=dKJOMBDWEJ4qtCm7-6",
         "image": {
           "mobile": "/assets/images/screenshots/carevita-mobile.png",
           "desktop": "/assets/images/screenshots/carevita-desktop.png",
@@ -323,12 +280,6 @@
       {
         "title": "Xorbtec Computer Services",
         "url": "https://www.xorbtec.co.za",
-        "year": 2023,
-        "techSummary": ["Next.js", "Node.js"],
-        "techExtended": ["Next.js", "Node.js", "Vercel"],
-        "design": ["Figma"],
-        "repo": "https://github.com/chadwright101/xorbtec.git",
-        "figmaLink": "https://www.figma.com/design/UYaWSLgdEwLo0EZC6vmfJL/xorbtec?m=auto&t=dKJOMBDWEJ4qtCm7-6",
         "image": {
           "mobile": "/assets/images/screenshots/xorbtec-mobile.png",
           "desktop": "/assets/images/screenshots/xorbtec-desktop.png",
@@ -342,12 +293,6 @@
       {
         "title": "A&I Sheeting",
         "url": "https://www.roofrefurb.co.za",
-        "year": 2023,
-        "techSummary": ["Next.js", "Node.js"],
-        "techExtended": ["Next.js", "Node.js", "Vercel"],
-        "design": ["Figma", "Premier Pro"],
-        "figmaLink": "https://www.figma.com/design/Tr9sgHrHAOKsb9sX2V89Y3/a%26i-roofing?m=auto&t=dKJOMBDWEJ4qtCm7-6",
-        "repo": "https://github.com/chadwright101/ai-sheeting.git",
         "image": {
           "mobile": "/assets/images/screenshots/ai-sheeting-mobile.png",
           "desktop": "/assets/images/screenshots/ai-sheeting-desktop.png",
@@ -361,10 +306,6 @@
       {
         "title": "Luna Blue",
         "url": "https://www.lunarblue.co.za",
-        "year": 2023,
-        "techSummary": ["Next.js", "Node.js"],
-        "techExtended": ["Next.js", "Node.js", "Vercel"],
-        "repo": "https://github.com/chadwright101/luna-blue.git",
         "locale": ["English", "Deutsch"],
         "image": {
           "mobile": "/assets/images/screenshots/luna-blue-mobile.png",
@@ -378,20 +319,7 @@
       },
       {
         "title": "Simone Snoyman Physiotherapy",
-        "year": 2022,
         "url": "https://simonesnoymanphysiotherapy.co.za",
-        "techSummary": ["Next.js", "Node.js", "WordPress"],
-        "techExtended": [
-          "Next.js",
-          "Node.js",
-          "WordPress",
-          "GraphQL",
-          "Vercel",
-          "AWS"
-        ],
-        "design": ["Figma"],
-        "repo": "https://github.com/chadwright101/simone-snoyman-physiotherapy.git",
-        "figmaLink": "https://www.figma.com/design/vC6HhYKYhQPLuGuxANOlMo/simone-snoyman-physiotherapy?m=auto&t=dKJOMBDWEJ4qtCm7-6",
         "image": {
           "mobile": "/assets/images/screenshots/simone-snoyman-physio-mobile.png",
           "desktop": "/assets/images/screenshots/simone-snoyman-physio-desktop.png",
@@ -404,12 +332,7 @@
       },
       {
         "title": "Neon Productions",
-        "year": 2022,
         "url": "https://neonproductions.co.za",
-        "techSummary": ["Next.js"],
-        "techExtended": ["Next.js", "Vercel"],
-        "design": ["Photoshop"],
-        "repo": "https://github.com/chadwright101/neon-productions.git",
         "image": {
           "mobile": "/assets/images/screenshots/neon-productions-mobile.png",
           "desktop": "/assets/images/screenshots/neon-productions-desktop.png",
@@ -422,11 +345,7 @@
       },
       {
         "title": "Sileta Engineers",
-        "year": 2022,
         "url": "https://sileta.co.za",
-        "techSummary": ["Pug"],
-        "techExtended": ["Pug"],
-        "repo": "https://github.com/chadwright101/sileta-engineers.git",
         "image": {
           "mobile": "/assets/images/screenshots/sileta-engineers-mobile.png",
           "desktop": "/assets/images/screenshots/sileta-engineers-desktop.png",
