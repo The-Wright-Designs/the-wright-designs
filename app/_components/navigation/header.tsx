@@ -13,9 +13,7 @@ import useScrollPosition from "@/app/_utils/scroll-position";
 
 const Header = () => {
   const [showMenuToggle, setShowMenuToggle] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  const scrollPosition = useScrollPosition();
+  const isScrolled = useScrollPosition(100);
 
   useEffect(() => {
     if (showMenuToggle) {
@@ -28,14 +26,6 @@ const Header = () => {
       document.body.style.overflow = "auto";
     };
   }, [showMenuToggle]);
-
-  useEffect(() => {
-    if (scrollPosition > 100) {
-      setIsScrolled(true);
-    } else {
-      setIsScrolled(false);
-    }
-  }, [scrollPosition]);
 
   return (
     <header

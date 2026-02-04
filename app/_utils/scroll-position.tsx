@@ -2,18 +2,18 @@
 
 import { useState, useEffect, useRef } from "react";
 
-const useScrollPosition = () => {
-  const scrollPosition = useRef(0);
-  const [, forceUpdate] = useState(0);
+const useScrollPosition = (threshold: number) => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const isScrolledRef = useRef(false);
 
   useEffect(() => {
     let ticking = false;
 
     const updatePosition = () => {
-      const currentScrollY = window.scrollY;
-      if (scrollPosition.current !== currentScrollY) {
-        scrollPosition.current = currentScrollY;
-        forceUpdate((n) => n + 1);
+      const crossed = window.scrollY > threshold;
+      if (crossed !== isScrolledRef.current) {
+        isScrolledRef.current = crossed;
+        setIsScrolled(crossed);
       }
       ticking = false;
     };
@@ -29,9 +29,9 @@ const useScrollPosition = () => {
     updatePosition();
 
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [threshold]);
 
-  return scrollPosition.current;
+  return isScrolled;
 };
 
 export default useScrollPosition;
