@@ -47,52 +47,36 @@
         "title": "Robberg Pharmacy",
         "url": "https://www.robbergpharmacy.co.za",
         "image": {
-          "mobile": "",
-          "desktop": "",
-          "desktopSmall": {
-            "jpg": "",
-            "webp": ""
-          },
-          "scrollImage": ""
+          "mobile": "/assets/images/screenshots/robberg-pharmacy-mobile.png",
+          "desktop": "/assets/images/screenshots/robberg-pharmacy-desktop.png",
+          "scrollImage": "/assets/images/screenshots/robberg-pharmacy-mobile-long.png"
         }
       },
       {
         "title": "The Sentinel News",
         "url": "https://www.sentinelnews.com.au",
         "image": {
-          "mobile": "",
-          "desktop": "",
-          "desktopSmall": {
-            "jpg": "",
-            "webp": ""
-          },
-          "scrollImage": ""
+          "mobile": "/assets/images/screenshots/the-sentinel-mobile.png",
+          "desktop": "/assets/images/screenshots/the-sentinel-desktop.png",
+          "scrollImage": "/assets/images/screenshots/the-sentinel-mobile-long.png"
         }
       },
       {
         "title": "Magnitude Apps",
         "url": "https://magnitudeapps.com",
         "image": {
-          "mobile": "",
-          "desktop": "",
-          "desktopSmall": {
-            "jpg": "",
-            "webp": ""
-          },
-          "scrollImage": ""
+          "mobile": "/assets/images/screenshots/magnitude-mobile.png",
+          "desktop": "/assets/images/screenshots/magnitude-desktop.png",
+          "scrollImage": "/assets/images/screenshots/magnitude-mobile-long.png"
         }
       },
       {
         "title": "La Luna Boutique",
         "url": "https://lalunaplett.co.za",
         "image": {
-          "mobile": "",
-          "desktop": "",
-          "desktopSmall": {
-            "jpg": "",
-            "webp": ""
-          },
-          "scrollImage": ""
+          "mobile": "/assets/images/screenshots/la-luna-mobile.png",
+          "desktop": "/assets/images/screenshots/la-luna-desktop.png",
+          "scrollImage": "/assets/images/screenshots/la-luna-mobile-long.png"
         }
       },
       {
@@ -101,10 +85,6 @@
         "image": {
           "mobile": "/assets/images/screenshots/lookout-centre-mobile.png",
           "desktop": "/assets/images/screenshots/lookout-centre-desktop.png",
-          "desktopSmall": {
-            "jpg": "/assets/images/screenshots/chad-dev/lookout-centre-desktop-small.jpg",
-            "webp": "/assets/images/screenshots/chad-dev/lookout-centre-desktop-small.webp"
-          },
           "scrollImage": "/assets/images/screenshots/lookout-centre-mobile-long.png"
         }
       },
@@ -114,10 +94,6 @@
         "image": {
           "mobile": "/assets/images/screenshots/swift-tool-hire-mobile.png",
           "desktop": "/assets/images/screenshots/swift-tool-hire-desktop.png",
-          "desktopSmall": {
-            "jpg": "/assets/images/screenshots/chad-dev/swift-tool-hire-desktop-small.jpg",
-            "webp": "/assets/images/screenshots/chad-dev/swift-tool-hire-desktop-small.webp"
-          },
           "scrollImage": "/assets/images/screenshots/swift-tool-hire-mobile-long.png"
         }
       },
@@ -127,10 +103,6 @@
         "image": {
           "mobile": "/assets/images/screenshots/wild-compass-events-mobile.png",
           "desktop": "/assets/images/screenshots/wild-compass-events-desktop.png",
-          "desktopSmall": {
-            "jpg": "/assets/images/screenshots/chad-dev/wild-compass-events-desktop-small.jpg",
-            "webp": "/assets/images/screenshots/chad-dev/wild-compass-events-desktop-small.webp"
-          },
           "scrollImage": "/assets/images/screenshots/wild-compass-events-mobile-long.png"
         }
       },
@@ -140,10 +112,6 @@
         "image": {
           "mobile": "/assets/images/screenshots/arlenes-pool-services-mobile.png",
           "desktop": "/assets/images/screenshots/arlenes-pool-services-desktop.png",
-          "desktopSmall": {
-            "jpg": "/assets/images/screenshots/chad-dev/arlenes-pool-services-desktop-small.jpg",
-            "webp": "/assets/images/screenshots/chad-dev/arlenes-pool-services-desktop-small.webp"
-          },
           "scrollImage": "/assets/images/screenshots/arlenes-pool-services-mobile-long.png"
         }
       },
@@ -153,10 +121,6 @@
         "image": {
           "mobile": "/assets/images/screenshots/big-day-event-mobile.png",
           "desktop": "/assets/images/screenshots/big-day-event-desktop.png",
-          "desktopSmall": {
-            "jpg": "/assets/images/screenshots/chad-dev/big-day-event-desktop-small.jpg",
-            "webp": "/assets/images/screenshots/chad-dev/big-day-event-desktop-small.webp"
-          },
           "scrollImage": "/assets/images/screenshots/big-day-event-mobile-long.png"
         }
       },
@@ -166,10 +130,6 @@
         "image": {
           "mobile": "/assets/images/screenshots/laverick-mobile.png",
           "desktop": "/assets/images/screenshots/laverick-desktop.png",
-          "desktopSmall": {
-            "jpg": "/assets/images/screenshots/chad-dev/laverick-desktop-small.jpg",
-            "webp": "/assets/images/screenshots/chad-dev/laverick-desktop-small.webp"
-          },
           "scrollImage": "/assets/images/screenshots/laverick-mobile-long.png"
         }
       },
@@ -179,10 +139,6 @@
         "image": {
           "mobile": "/assets/images/screenshots/tigo-lee-mobile.png",
           "desktop": "/assets/images/screenshots/tigo-lee-desktop.png",
-          "desktopSmall": {
-            "jpg": "/assets/images/screenshots/chad-dev/tigo-lee-desktop-small.jpg",
-            "webp": "/assets/images/screenshots/chad-dev/tigo-lee-desktop-small.webp"
-          },
           "scrollImage": "/assets/images/screenshots/tigo-lee-mobile-long.png"
         }
       },
@@ -192,10 +148,6 @@
         "image": {
           "mobile": "/assets/images/screenshots/real-brides-mobile.png",
           "desktop": "/assets/images/screenshots/real-brides-desktop.png",
-          "desktopSmall": {
-            "jpg": "/assets/images/screenshots/chad-dev/real-brides-desktop-small.jpg",
-            "webp": "/assets/images/screenshots/chad-dev/real-brides-desktop-small.webp"
-          },
           "scrollImage": "/assets/images/screenshots/real-brides-mobile-long.png"
         }
       },
@@ -205,10 +157,6 @@
         "image": {
           "mobile": "/assets/images/screenshots/edc-mobile.png",
           "desktop": "/assets/images/screenshots/edc-desktop.png",
-          "desktopSmall": {
-            "jpg": "/assets/images/screenshots/chad-dev/edc-desktop-small.jpg",
-            "webp": "/assets/images/screenshots/chad-dev/edc-desktop-small.webp"
-          },
           "scrollImage": "/assets/images/screenshots/edc-mobile-long.png"
         }
       },
@@ -218,10 +166,6 @@
         "image": {
           "mobile": "/assets/images/screenshots/adopt-a-swimmer-mobile.png",
           "desktop": "/assets/images/screenshots/adopt-a-swimmer-desktop.png",
-          "desktopSmall": {
-            "jpg": "/assets/images/screenshots/chad-dev/adopt-a-swimmer-desktop-small.jpg",
-            "webp": "/assets/images/screenshots/chad-dev/adopt-a-swimmer-desktop-small.webp"
-          },
           "scrollImage": "/assets/images/screenshots/adopt-a-swimmer-mobile-long.png"
         }
       },
@@ -231,10 +175,6 @@
         "image": {
           "mobile": "/assets/images/screenshots/scbr-mobile.png",
           "desktop": "/assets/images/screenshots/scbr-desktop.jpg",
-          "desktopSmall": {
-            "jpg": "/assets/images/screenshots/chad-dev/scbr-desktop-small.jpg",
-            "webp": "/assets/images/screenshots/chad-dev/scbr-desktop-small.webp"
-          },
           "scrollImage": "/assets/images/screenshots/scbr-mobile-long.jpg"
         }
       },
@@ -244,10 +184,6 @@
         "image": {
           "mobile": "/assets/images/screenshots/monks-medical-mobile.png",
           "desktop": "/assets/images/screenshots/monks-medical-desktop.jpg",
-          "desktopSmall": {
-            "jpg": "/assets/images/screenshots/chad-dev/monks-medical-desktop-small.jpg",
-            "webp": "/assets/images/screenshots/chad-dev/monks-medical-desktop-small.webp"
-          },
           "scrollImage": "/assets/images/screenshots/monks-medical-mobile-long.jpg"
         }
       },
@@ -257,10 +193,6 @@
         "image": {
           "mobile": "/assets/images/screenshots/carevita%23fit-mobile.png",
           "desktop": "/assets/images/screenshots/carevita%23fit-desktop.png",
-          "desktopSmall": {
-            "jpg": "/assets/images/screenshots/chad-dev/carevita%23fit-desktop-small.jpg",
-            "webp": "/assets/images/screenshots/chad-dev/carevita%23fit-desktop-small.webp"
-          },
           "scrollImage": "/assets/images/screenshots/carevita%23fit-mobile-long.png"
         }
       },
@@ -270,10 +202,6 @@
         "image": {
           "mobile": "/assets/images/screenshots/carevita-mobile.png",
           "desktop": "/assets/images/screenshots/carevita-desktop.png",
-          "desktopSmall": {
-            "jpg": "/assets/images/screenshots/chad-dev/carevita-desktop-small.jpg",
-            "webp": "/assets/images/screenshots/chad-dev/carevita-desktop-small.webp"
-          },
           "scrollImage": "/assets/images/screenshots/carevita-mobile-long.png"
         }
       },
@@ -283,10 +211,6 @@
         "image": {
           "mobile": "/assets/images/screenshots/xorbtec-mobile.png",
           "desktop": "/assets/images/screenshots/xorbtec-desktop.png",
-          "desktopSmall": {
-            "jpg": "/assets/images/screenshots/chad-dev/xorbtec-desktop-small.jpg",
-            "webp": "/assets/images/screenshots/chad-dev/xorbtec-desktop-small.webp"
-          },
           "scrollImage": "/assets/images/screenshots/xorbtec-mobile-long.png"
         }
       },
@@ -296,10 +220,6 @@
         "image": {
           "mobile": "/assets/images/screenshots/ai-sheeting-mobile.png",
           "desktop": "/assets/images/screenshots/ai-sheeting-desktop.png",
-          "desktopSmall": {
-            "jpg": "/assets/images/screenshots/chad-dev/ai-sheeting-desktop-small.jpg",
-            "webp": "/assets/images/screenshots/chad-dev/ai-sheeting-desktop-small.webp"
-          },
           "scrollImage": "/assets/images/screenshots/ai-sheeting-mobile-long.png"
         }
       },
@@ -310,10 +230,6 @@
         "image": {
           "mobile": "/assets/images/screenshots/luna-blue-mobile.png",
           "desktop": "/assets/images/screenshots/luna-blue-desktop.png",
-          "desktopSmall": {
-            "jpg": "/assets/images/screenshots/chad-dev/luna-blue-desktop-small.jpg",
-            "webp": "/assets/images/screenshots/chad-dev/luna-blue-desktop-small.webp"
-          },
           "scrollImage": "/assets/images/screenshots/luna-blue-mobile-long.png"
         }
       },
@@ -323,10 +239,6 @@
         "image": {
           "mobile": "/assets/images/screenshots/simone-snoyman-physio-mobile.png",
           "desktop": "/assets/images/screenshots/simone-snoyman-physio-desktop.png",
-          "desktopSmall": {
-            "jpg": "/assets/images/screenshots/chad-dev/simone-snoyman-physio-desktop-small.jpg",
-            "webp": "/assets/images/screenshots/chad-dev/simone-snoyman-physio-desktop-small.webp"
-          },
           "scrollImage": "/assets/images/screenshots/simone-snoyman-physio-mobile-long.png"
         }
       },
@@ -336,10 +248,6 @@
         "image": {
           "mobile": "/assets/images/screenshots/neon-productions-mobile.png",
           "desktop": "/assets/images/screenshots/neon-productions-desktop.png",
-          "desktopSmall": {
-            "jpg": "/assets/images/screenshots/chad-dev/neon-productions-desktop-small.jpg",
-            "webp": "/assets/images/screenshots/chad-dev/neon-productions-desktop-small.webp"
-          },
           "scrollImage": "/assets/images/screenshots/neon-productions-mobile-long.png"
         }
       },
@@ -349,10 +257,6 @@
         "image": {
           "mobile": "/assets/images/screenshots/sileta-engineers-mobile.png",
           "desktop": "/assets/images/screenshots/sileta-engineers-desktop.png",
-          "desktopSmall": {
-            "jpg": "/assets/images/screenshots/chad-dev/sileta-engineers-desktop-small.jpg",
-            "webp": "/assets/images/screenshots/chad-dev/sileta-engineers-desktop-small.webp"
-          },
           "scrollImage": "/assets/images/screenshots/sileta-engineers-mobile-long.png"
         }
       }
