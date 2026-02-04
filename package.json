@@ -17,7 +17,7 @@
     "eslint-config-next": "16.0.10",
     "express": "^5.2.1",
     "express-rate-limit": "^8.2.1",
-    "next": "16.0.10",
+    "next": "^16.1.6",
     "nodemailer": "^7.0.11",
     "react": "19.2.3",
     "react-dom": "19.2.3",
@@ -30,6 +30,7 @@
   "devDependencies": {
     "@types/nodemailer": "^7.0.4",
     "autoprefixer": "^10.4.22",
+    "baseline-browser-mapping": "^2.9.19",
     "classnames": "^2.5.1",
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.17"
