@@ -112,18 +112,11 @@ const ServicesComponent = () => {
                 We pride ourselves on delivering high-quality projects on time
                 and within budget.
               </p>
-              <p className="font-light mb-7">
+              <p className="font-light">
                 We handle everything from concept to launch, ensuring a smooth
                 and stress-free experience, ensuring the way forward is as
                 simple and understandable as possible.
               </p>
-              <Button
-                buttonColor="pink"
-                url="https://www.chadwright.dev/projects/websites"
-                target="_blank"
-              >
-                Development Archive
-              </Button>
             </div>
           </div>
           <Image
