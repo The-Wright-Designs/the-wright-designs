@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Button from "../button";
-import HeroSlideshow from "@/app/_lib/hero-slideshow";
+import HeroSlideshow from "@/_lib/hero-slideshow";
 
 interface Props {
   cssClasses?: string;

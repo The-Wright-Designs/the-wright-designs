@@ -9,7 +9,7 @@ import classNames from "classnames";
 import MobileMenuToggle from "./mobile/mobile-menu-toggle";
 import MenuButton from "./mobile/menu-button";
 import DesktopMenu from "./desktop/desktop-menu";
-import useScrollPosition from "@/app/_utils/scroll-position";
+import useScrollPosition from "@/_utils/scroll-position";
 
 const Header = () => {
   const [showMenuToggle, setShowMenuToggle] = useState(false);
@@ -33,7 +33,7 @@ const Header = () => {
         "fixed w-full bg-blue border-b-4 border-b-beige drop-shadow-md py-6 z-20 ease-in-out duration-300 tablet:px-10",
         {
           "py-[18px]": isScrolled,
-        }
+        },
       )}
     >
       <div className="desktop:max-w-[1280px] desktop:m-auto tablet:flex tablet:justify-between tablet:items-end">
@@ -48,7 +48,7 @@ const Header = () => {
                   {
                     "w-[160px]": isScrolled,
                     "w-[200px]": !isScrolled,
-                  }
+                  },
                 )}
                 width={274}
                 height={60}
@@ -63,7 +63,7 @@ const Header = () => {
                   {
                     "-translate-y-20": showMenuToggle,
                     "h-9 w-9": isScrolled,
-                  }
+                  },
                 )}
                 width={274}
                 height={60}
@@ -84,7 +84,7 @@ const Header = () => {
               {
                 "translate-x-0": showMenuToggle,
                 "translate-x-full": !showMenuToggle,
-              }
+              },
             )}
           />
         </div>

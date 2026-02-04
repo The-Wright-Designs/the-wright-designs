@@ -6,7 +6,7 @@ import { useFormStatus } from "react-dom";
 
 import classNames from "classnames";
 
-import ArrowSvg from "@/app/_lib/arrow-svg";
+import ArrowSvg from "@/_lib/arrow-svg";
 
 interface Props {
   url?: string;
@@ -50,7 +50,7 @@ const Button = ({
         outline && buttonColor === "pink",
       "bg-transparent border-2 border-beige text-beige":
         outline && buttonColor === "beige",
-    }
+    },
   );
 
   if (form) {

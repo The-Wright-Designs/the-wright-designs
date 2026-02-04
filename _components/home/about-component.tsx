@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 import Button from "../button";
-import OurClientsSlideshow from "@/app/_lib/our-clients-slideshow";
+import OurClientsSlideshow from "@/_lib/our-clients-slideshow";
 
 const AboutComponent = () => {
   return (

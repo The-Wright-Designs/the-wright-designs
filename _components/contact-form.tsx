@@ -1,12 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
-import ReCAPTCHA from "react-google-recaptcha";
-
-import Button from "@/app/_components/button";
-import { sendEmail } from "@/app/_actions/actions";
-import classNames from "classnames";
+import Button from "@/_components/button";
+import { sendEmail } from "@/_actions/actions";
 
 interface Props {
   cssClasses?: string;
@@ -14,17 +12,8 @@ interface Props {
 
 const ContactForm = ({ cssClasses }: Props) => {
   const [showMessage, setShowMessage] = useState(false);
-  const [validateRecaptcha, setValidateRecaptcha] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
-
-  const handleRecaptchaChange = (value: any) => {
-    if (value === null) {
-      setValidateRecaptcha(false);
-      console.log("Recaptcha expired");
-    } else {
-      setValidateRecaptcha(!!value);
-    }
-  };
+  const { executeRecaptcha } = useGoogleReCaptcha();
 
   useEffect(() => {
     if (formSubmitted) {
@@ -54,6 +43,8 @@ const ContactForm = ({ cssClasses }: Props) => {
       {!formSubmitted && (
         <form
           action={async (formData) => {
+            const recaptchaToken = await executeRecaptcha("contact_form");
+            formData.append("recaptchaToken", recaptchaToken);
             await sendEmail(formData);
             setFormSubmitted(true);
           }}
@@ -130,22 +121,12 @@ const ContactForm = ({ cssClasses }: Props) => {
               </div>
 
               <Button
-                url=""
-                cssClasses={classNames(
-                  "justify-center tablet:w-[150px] tablet:justify-between",
-                  {
-                    "opacity-50 desktopSmall:cursor-not-allowed":
-                      !validateRecaptcha,
-                    "hover:desktopSmall:opacity-90": validateRecaptcha,
-                  }
-                )}
-                disabled={!validateRecaptcha}
+                cssClasses="justify-center tablet:w-[150px] tablet:justify-between"
                 form
                 buttonColor="pink"
               >
                 Submit
               </Button>
-              <Recaptcha onChange={handleRecaptchaChange} />
             </>
           )}
         </form>
@@ -155,17 +136,3 @@ const ContactForm = ({ cssClasses }: Props) => {
 };
 
 export default ContactForm;
-
-interface RecaptchaProps {
-  onChange: (value: string | null) => void;
-}
-
-const Recaptcha = ({ onChange }: RecaptchaProps) => {
-  return (
-    <ReCAPTCHA
-      sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ?? ""}
-      onChange={onChange}
-      className="recaptcha"
-    />
-  );
-};

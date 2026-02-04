@@ -1,7 +1,7 @@
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 
-import data from "@/app/_data/general-data.json";
+import data from "@/_data/general-data.json";
 import classNames from "classnames";
 
 export const scrollIntoView = (section: string) => {

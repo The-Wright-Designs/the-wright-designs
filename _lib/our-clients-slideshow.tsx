@@ -6,7 +6,7 @@ import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 
-import data from "@/app/_data/general-data.json";
+import data from "@/_data/general-data.json";
 
 import "swiper/css";
 import "swiper/css/pagination";

@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
-import Footer from "@/app/_components/navigation/footer";
-import Header from "@/app/_components/navigation/header";
+import Footer from "@/_components/navigation/footer";
+import Header from "@/_components/navigation/header";
 
-import "@/app/_styles/globals.css";
+import "@/_styles/globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.thewrightdesigns.co.za"),

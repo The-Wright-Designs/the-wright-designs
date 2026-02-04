@@ -133,3 +133,7 @@
 .scroll-animate {
     animation: scrollAnimation 2s ease-in-out 1;
 }
+
+.grecaptcha-badge {
+    visibility: hidden;
+}

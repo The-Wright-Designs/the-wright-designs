@@ -5,9 +5,9 @@ import { usePathname } from "next/navigation";
 
 import classNames from "classnames";
 
-import data from "@/app/_data/general-data.json";
-import SocialIcons from "@/app/_lib/social-icons";
-import ArrowSvg from "@/app/_lib/arrow-svg";
+import data from "@/_data/general-data.json";
+import SocialIcons from "@/_lib/social-icons";
+import ArrowSvg from "@/_lib/arrow-svg";
 import { scrollIntoView } from "../desktop/desktop-menu";
 
 const { navigation } = data;
@@ -38,7 +38,7 @@ const MobileMenuToggle = ({ onClick, cssClasses }: Props) => {
               "text-beige flex gap-3 items-center cursor-pointer",
               {
                 "border-b border-beige pb-5": index !== navigation.length - 1,
-              }
+              },
             )}
           >
             {(item.title === "About" && currentRoute === "/") ||

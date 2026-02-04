@@ -1,8 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import data from "@/app/_data/general-data.json";
-import SocialIcons from "@/app/_lib/social-icons";
+import data from "@/_data/general-data.json";
+import SocialIcons from "@/_lib/social-icons";
 
 const { navigation } = data;
 

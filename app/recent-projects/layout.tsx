@@ -2,7 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import classNames from "classnames";
-import ContactForm from "@/app/_components/contact-form";
+import ContactForm from "@/_components/contact-form";
 import Link from "next/link";
 
 export default function RecentProjectsLayout({
@@ -25,7 +25,7 @@ export default function RecentProjectsLayout({
                 currentRoute === "/recent-projects/websites",
               "hover:bg-pink/60 hover:text-white":
                 currentRoute !== "/recent-projects/websites",
-            }
+            },
           )}
         >
           Websites
@@ -39,7 +39,7 @@ export default function RecentProjectsLayout({
               "bg-blue text-white": currentRoute === "/recent-projects/apps",
               "hover:bg-pink/60 hover:text-white":
                 currentRoute !== "/recent-projects/apps",
-            }
+            },
           )}
         >
           Apps

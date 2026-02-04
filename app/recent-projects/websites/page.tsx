@@ -6,11 +6,11 @@ import Image from "next/image";
 
 import classNames from "classnames";
 
-import RecentProjectsWebsiteScroller from "@/app/_components/recent-projects/websites/recent-projects-website-scroller";
+import RecentProjectsWebsiteScroller from "@/_components/recent-projects/websites/recent-projects-website-scroller";
 
-import technicalList from "@/app/_data/technical-data.json";
-import ProjectIcons from "@/app/_lib/project-icons";
-import Button from "@/app/_components/button";
+import technicalList from "@/_data/technical-data.json";
+import ProjectIcons from "@/_lib/project-icons";
+import Button from "@/_components/button";
 
 interface Props {
   cssClasses?: string;

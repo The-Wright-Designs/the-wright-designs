@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import classNames from "classnames";
 
-import technicalList from "@/app/_data/technical-data.json";
+import technicalList from "@/_data/technical-data.json";
 
 const statusOrder = ["In development", "Ongoing", "Completed"];
 

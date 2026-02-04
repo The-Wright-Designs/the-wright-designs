@@ -1,8 +1,9 @@
 "use server";
 
-import data from "@/app/_data/general-data.json";
+import data from "@/_data/general-data.json";
 import nodemailer from "nodemailer";
-import { emailTemplate } from "@/app/_lib/email-template";
+import { emailTemplate } from "@/_lib/email-template";
+import { verifyRecaptchaToken } from "@/_lib/verify-recaptcha";
 import express from "express";
 import rateLimit from "express-rate-limit";
 
@@ -20,6 +21,14 @@ export async function sendEmail(formData) {
 
   try {
     if (honey === null) {
+      const recaptchaToken = formData.get("recaptchaToken");
+      const recaptchaResult = await verifyRecaptchaToken(recaptchaToken);
+
+      if (!recaptchaResult.success) {
+        console.error("reCAPTCHA verification failed:", recaptchaResult.error);
+        return;
+      }
+
       const name = formData.get("fullName");
       const email = formData.get("emailAddress");
       const message = formData.get("message");
@@ -61,10 +70,20 @@ const {
   contact: { email, phone },
 } = data;
 
-export const showEmailAddress = async () => {
+export const showEmailAddress = async (token) => {
+  const result = await verifyRecaptchaToken(token);
+  if (!result.success) {
+    console.error("reCAPTCHA verification failed:", result.error);
+    return null;
+  }
   return email;
 };
 
-export const showPhoneNumber = async () => {
+export const showPhoneNumber = async (token) => {
+  const result = await verifyRecaptchaToken(token);
+  if (!result.success) {
+    console.error("reCAPTCHA verification failed:", result.error);
+    return null;
+  }
   return phone;
 };
