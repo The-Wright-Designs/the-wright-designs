@@ -85,7 +85,7 @@ const RecentProjectsAppsTable = () => {
                   {year}
                 </p>
                 <p
-                  className={`${rowItemBorders} ${rowItemSpacing} ${
+                  className={`text-left ${rowItemBorders} ${rowItemSpacing} ${
                     index % 2 !== 0 && "text-white"
                   }`}
                 >

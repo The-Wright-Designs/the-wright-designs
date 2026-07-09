@@ -1,48 +1,15 @@
 {
   "projectsList": {
-    "apps": [
-      {
-        "client": "Carevita",
-        "title": "Retirement resident management app",
-        "description": "A centralized platform that eliminated paper-based records for 100+ staff across multiple retirement facilities nationwide. The app enables efficient resident management, including health notes, meal plans, and document access, significantly improving operational efficiency and information accessibility for care teams.",
-        "year": 2025,
-        "status": "In development",
-        "image": "/assets/images/our-clients/carevita-logo.png"
-      },
-      {
-        "client": "Yellow Brick Cinema",
-        "title": "Daily competitor report automation",
-        "description": "This automated reporting system compiles daily data on our client's competitors' YouTube channels, including new video uploads, view counts, and subscriber growth. The system generates a comprehensive report and emails it to the client each morning, enabling them to stay informed about their competitive landscape without manual effort.",
-        "year": 2025,
-        "status": "Completed",
-        "image": "/assets/images/our-clients/yellow-brick-cinema-logo.jpg"
-      },
-      {
-        "client": "Bean Tree Coffee Shop",
-        "title": "Coffee shop loyalty program",
-        "description": "This database driven system tracks customers' qualifying purchases using their phone numbers. When a customer reaches a reward threshold, the staff will be notified and a discount code will be generated. The customer can then use this code at the POS to receive a free item. After redeeming the code, the system resets, allowing customers to continue earning rewards.",
-        "year": 2024,
-        "status": "Completed",
-        "image": "/assets/images/our-clients/bean-tree-logo.png"
-      },
-      {
-        "client": "Louann Waters Photography",
-        "title": "Email data capture automation",
-        "description": "This email data capture system streamlines our client's photography storefront operations by automatically parsing order summary emails and updating a Google Sheet with relevant order information. The system is designed to integrate seamlessly with the client's existing workflow, significantly reducing the time spent on manual data entry.",
-        "year": 2024,
-        "status": "Completed",
-        "image": "/assets/images/our-clients/louann-waters-photography-logo.png"
-      },
-      {
-        "client": "Yellow Brick Cinema",
-        "title": "Video subtitle translation automation",
-        "description": "This system dramatically streamlines our client's YouTube video management process. Previously, the client's team spent hours daily manually inputting subtitles in 20 different languages. Our automated solution now enables them to update subtitles in seconds, freeing up their staff to focus on other critical tasks.",
-        "year": 2023,
-        "status": "Completed",
-        "image": "/assets/images/our-clients/yellow-brick-cinema-logo.jpg"
-      }
-    ],
     "websites": [
+      {
+        "title": "Natural Highs Clone Vault",
+        "url": "https://www.naturalhighs.co.za",
+        "image": {
+          "mobile": "/assets/images/screenshots/natural-highs-mobile.png",
+          "desktop": "/assets/images/screenshots/natural-highs-desktop.png",
+          "scrollImage": "/assets/images/screenshots/natural-highs-mobile-long.png"
+        }
+      },
       {
         "title": "Robberg Pharmacy",
         "url": "https://www.robbergpharmacy.co.za",
@@ -259,6 +226,48 @@
           "desktop": "/assets/images/screenshots/sileta-engineers-desktop.png",
           "scrollImage": "/assets/images/screenshots/sileta-engineers-mobile-long.png"
         }
+      }
+    ],
+    "apps": [
+      {
+        "client": "Carevita",
+        "title": "D3 - Retirement resident management app",
+        "description": "A centralised platform that eliminated paper-based records for 100+ staff across multiple retirement facilities nationwide. The app enables efficient resident management, including health notes, meal plans, and document access, significantly improving operational efficiency and information accessibility for care teams.",
+        "year": 2025,
+        "status": "Phase 1 complete",
+        "image": "/assets/images/our-clients/carevita-logo.png"
+      },
+      {
+        "client": "Yellow Brick Cinema",
+        "title": "Daily competitor report automation",
+        "description": "This automated reporting system compiles daily data on our client's competitors' YouTube channels, including new video uploads, view counts, and subscriber growth. The system generates a comprehensive report and emails it to the client each morning, enabling them to stay informed about their competitive landscape without manual effort.",
+        "year": 2025,
+        "status": "Completed",
+        "image": "/assets/images/our-clients/yellow-brick-cinema-logo.jpg"
+      },
+      {
+        "client": "Bean Tree Coffee Shop",
+        "title": "Coffee shop loyalty program",
+        "description": "This database driven system tracks customers' qualifying purchases using their phone numbers. When a customer reaches a reward threshold, the staff will be notified and a discount code will be generated. The customer can then use this code at the POS to receive a free item. After redeeming the code, the system resets, allowing customers to continue earning rewards.",
+        "year": 2024,
+        "status": "Completed",
+        "image": "/assets/images/our-clients/bean-tree-logo.png"
+      },
+      {
+        "client": "Louann Waters Photography",
+        "title": "Email data capture automation",
+        "description": "This email data capture system streamlines our client's photography storefront operations by automatically parsing order summary emails and updating a Google Sheet with relevant order information. The system is designed to integrate seamlessly with the client's existing workflow, significantly reducing the time spent on manual data entry.",
+        "year": 2024,
+        "status": "Completed",
+        "image": "/assets/images/our-clients/louann-waters-photography-logo.png"
+      },
+      {
+        "client": "Yellow Brick Cinema",
+        "title": "Video subtitle translation automation",
+        "description": "This system dramatically streamlines our client's YouTube video management process. Previously, the client's team spent hours daily manually inputting subtitles in 20 different languages. Our automated solution now enables them to update subtitles in seconds, freeing up their staff to focus on other critical tasks.",
+        "year": 2023,
+        "status": "Completed",
+        "image": "/assets/images/our-clients/yellow-brick-cinema-logo.jpg"
       }
     ]
   }
