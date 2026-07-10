@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import Footer from "@/_components/navigation/footer";
 import Header from "@/_components/navigation/header";
+import FacebookPixel from "@/_components/facebook-pixel";
 
 import "@/_styles/globals.css";
 
@@ -50,6 +51,7 @@ export default function RootLayout({
         />
       </head>
       <body>
+        <FacebookPixel />
         <Header />
         <div className="px-5 overflow-x-hidden tablet:px-10 desktop:px-0 desktop:max-w-[1280px] desktop:m-auto">
           {children}
