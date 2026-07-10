@@ -120,7 +120,7 @@ const ServicesComponent = () => {
             </div>
           </div>
           <Image
-            src="/assets/images/development.jpg"
+            src="/assets/images/development.png"
             alt="Development phase"
             width={800}
             height={450}
@@ -153,7 +153,7 @@ const ServicesComponent = () => {
               <h4 className="text-[28px] font-medium mb-4">Domain & Hosting</h4>
               <p className="font-light mb-4">
                 At The Wright Designs, we provide seamless domain and hosting
-                solutions that form the foundation of your online presence.
+                solutions that form the foundation of your online presence.{" "}
                 <span className="font-bold">
                   Our competitively priced hosting packages are designed to
                   accommodate businesses of any size, ensuring you only pay for
@@ -175,7 +175,7 @@ const ServicesComponent = () => {
             </div>
           </div>
           <Image
-            src="/assets/images/maintenance.jpg"
+            src="/assets/images/maintenance.png"
             alt="Maintenance phase"
             width={800}
             height={450}

@@ -57,6 +57,26 @@
   ],
   "ourClients": [
     {
+      "src": "/assets/images/our-clients/natural-highs-clone-vault-logo.png",
+      "alt": "Natural Highs Clone Vault logo",
+      "url": "https://www.naturalhighs.co.za/"
+    },
+    {
+      "src": "/assets/images/our-clients/the-sentinel-logo.png",
+      "alt": "The Sentinel News logo",
+      "url": "https://www.sentinelnews.com.au/"
+    },
+    {
+      "src": "/assets/images/our-clients/cross.png",
+      "alt": "Robberg Pharmacy logo",
+      "url": "https://www.robbergpharmacy.co.za/"
+    },
+    {
+      "src": "/assets/images/our-clients/magnitude-logo-blue.png",
+      "alt": "Magnitude logo",
+      "url": "https://www.magnitudeapps.com/"
+    },
+    {
       "src": "/assets/images/our-clients/swift-tool-hire-logo.png",
       "alt": "Swift Tool Hire logo",
       "url": "https://www.swifttoolhire.co.za/"
