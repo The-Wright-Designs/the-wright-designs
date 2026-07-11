@@ -77,7 +77,7 @@ const ServicesComponent = () => {
             width={800}
             height={450}
             sizes="(max-width: 425px) 90vw, (max-width:800px) 75vw, 50vw"
-            className="w-full h-auto rounded-lg drop-shadow-md desktopSmall:-mb-[150px]"
+            className="w-full h-auto rounded-lg shadow-md desktopSmall:-mb-[150px]"
           />
         </li>
         <li className="border-b border-pink/50 pb-10 tablet:grid grid-cols-2 gap-10 desktopSmall:pb-15">
@@ -125,7 +125,7 @@ const ServicesComponent = () => {
             width={800}
             height={450}
             sizes="(max-width: 425px) 90vw, (max-width:1100px) 85vw, 50vw"
-            className="w-full h-auto rounded-lg drop-shadow-md tablet:h-full object-cover aspect-video"
+            className="w-full h-auto rounded-lg shadow-md tablet:h-full object-cover aspect-video"
           />
         </li>
         <li className="border-b border-pink/50 pb-10 tablet:grid grid-cols-2 gap-10 desktopSmall:pb-15">
@@ -180,7 +180,7 @@ const ServicesComponent = () => {
             width={800}
             height={450}
             sizes="(max-width: 425px) 90vw, (max-width:1100px) 85vw, 50vw"
-            className="w-full h-auto rounded-lg drop-shadow-md tablet:h-full object-cover aspect-video"
+            className="w-full h-auto rounded-lg shadow-md tablet:h-full object-cover aspect-video"
           />
         </li>
         <li className="tablet:grid grid-cols-2 gap-10">
@@ -231,7 +231,7 @@ const ServicesComponent = () => {
             width={800}
             height={450}
             sizes="(max-width: 425px) 90vw, (max-width:1100px) 85vw, 50vw"
-            className="w-full h-auto rounded-lg drop-shadow-md tablet:h-full object-cover aspect-video"
+            className="w-full h-auto rounded-lg shadow-md tablet:h-full object-cover aspect-video"
           />
         </li>
       </ul>

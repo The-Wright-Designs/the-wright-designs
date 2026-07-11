@@ -30,13 +30,14 @@ const Header = () => {
   return (
     <header
       className={classNames(
-        "fixed w-full bg-blue border-b-4 border-b-beige drop-shadow-md py-6 z-20 ease-in-out duration-300 tablet:px-10",
+        "fixed w-full bg-blue border-b-4 border-b-beige shadow-md z-20 ease-in-out duration-300 tablet:px-10 flex items-center",
         {
-          "py-[18px]": isScrolled,
+          "h-[92px]": isScrolled,
+          "h-[104px]": !isScrolled,
         },
       )}
     >
-      <div className="desktop:max-w-[1280px] desktop:m-auto tablet:flex tablet:justify-between tablet:items-end">
+      <div className="w-full desktop:max-w-[1280px] desktop:m-auto tablet:flex tablet:justify-between tablet:items-end">
         <div>
           <div className="flex justify-between items-center px-5 tablet:px-0">
             <Link href="/" className="tablet:hover:opacity-95">
@@ -44,10 +45,9 @@ const Header = () => {
                 src="/assets/the-wright-designs-logo.png"
                 alt="The Wright Designs logo"
                 className={classNames(
-                  "hidden h-auto translate-y-1 tablet:block rotate-1 ease-in-out duration-300",
+                  "hidden h-auto w-[200px] origin-left translate-y-1 tablet:block rotate-1 ease-in-out duration-300",
                   {
-                    "w-[160px]": isScrolled,
-                    "w-[200px]": !isScrolled,
+                    "scale-[0.8]": isScrolled,
                   },
                 )}
                 width={274}
@@ -62,7 +62,7 @@ const Header = () => {
                   "h-12 w-12 ease-in-out duration-300 tablet:hidden",
                   {
                     "-translate-y-20": showMenuToggle,
-                    "h-9 w-9": isScrolled,
+                    "scale-75": isScrolled && !showMenuToggle,
                   },
                 )}
                 width={274}

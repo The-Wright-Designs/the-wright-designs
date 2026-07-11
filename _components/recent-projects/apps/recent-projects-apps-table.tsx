@@ -28,7 +28,7 @@ const RecentProjectsAppsTable = () => {
 
   return (
     <>
-      <div className={`bg-pink drop-shadow-md ${gridLayout}`}>
+      <div className={`bg-pink shadow-md ${gridLayout}`}>
         <h2 className={`${headingItemStyling} border-l-0`}>Title</h2>
         <h2 className={`${headingItemStyling}`}>Client</h2>
         <h2 className={`${headingItemStyling}`}>Description</h2>
@@ -43,7 +43,7 @@ const RecentProjectsAppsTable = () => {
               <li
                 key={index}
                 className={classNames(`${gridLayout}`, {
-                  "bg-pink/90 drop-shadow-md": index % 2 !== 0,
+                  "bg-pink/90 shadow-md": index % 2 !== 0,
                 })}
               >
                 <h3

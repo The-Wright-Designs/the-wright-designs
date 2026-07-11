@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      <HeroComponent cssClasses="mt-[100px] tablet:mt-[90px]" />
+      <HeroComponent cssClasses="mt-[104px]" />
       <OurClientsComponent cssClasses="desktopSmall:hidden" />
       <div id="about" className="-translate-y-32"></div>
       <AboutComponent />
