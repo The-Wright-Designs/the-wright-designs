@@ -46,6 +46,9 @@ const ContactForm = ({ cssClasses }: Props) => {
             const recaptchaToken = await executeRecaptcha("contact_form");
             formData.append("recaptchaToken", recaptchaToken);
             await sendEmail(formData);
+            if (typeof window !== "undefined" && window.fbq) {
+              window.fbq("track", "Lead");
+            }
             setFormSubmitted(true);
           }}
           className="flex flex-col gap-8"

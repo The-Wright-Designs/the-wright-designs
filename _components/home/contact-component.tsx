@@ -33,7 +33,12 @@ const ContactInnerComponent = ({ cssClasses }: Props) => {
     setShowSpinnerPhone(true);
     const token = await executeRecaptcha("show_phone");
     const phoneNumber = await showPhoneNumber(token);
-    if (phoneNumber) setShowPhone(phoneNumber);
+    if (phoneNumber) {
+      setShowPhone(phoneNumber);
+      if (typeof window !== "undefined" && window.fbq) {
+        window.fbq("track", "Contact");
+      }
+    }
     setShowSpinnerPhone(false);
   };
 
@@ -41,7 +46,12 @@ const ContactInnerComponent = ({ cssClasses }: Props) => {
     setShowSpinnerEmail(true);
     const token = await executeRecaptcha("show_email");
     const emailAddress = await showEmailAddress(token);
-    if (emailAddress) setShowEmail(emailAddress);
+    if (emailAddress) {
+      setShowEmail(emailAddress);
+      if (typeof window !== "undefined" && window.fbq) {
+        window.fbq("track", "Contact");
+      }
+    }
     setShowSpinnerEmail(false);
   };
 
