@@ -19,7 +19,11 @@ const Footer = ({ cssClasses }: Props) => {
             <ul className="flex flex-col font-light text-[14px] gap-1">
               {navigation.map((item, index) => (
                 <li key={index} className="text-beige hover:text-pink mr-auto">
-                  <Link href={item.url}>{item.title}</Link>
+                  <Link
+                    href={item.url.startsWith("/") ? item.url : `/#${item.url}`}
+                  >
+                    {item.title}
+                  </Link>
                 </li>
               ))}
             </ul>
