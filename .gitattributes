@@ -1,5 +1,0 @@
-public/*.jpg filter=lfs diff=lfs merge=lfs -text
-public/*.jpeg filter=lfs diff=lfs merge=lfs -text
-public/*.png filter=lfs diff=lfs merge=lfs -text
-public/*.webp filter=lfs diff=lfs merge=lfs -text
-public/*.svg filter=lfs diff=lfs merge=lfs -text
