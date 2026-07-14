@@ -4,29 +4,18 @@ import data from "@/_data/general-data.json";
 import nodemailer from "nodemailer";
 import { emailTemplate } from "@/_lib/email-template";
 import { verifyRecaptchaToken } from "@/_lib/verify-recaptcha";
-import express from "express";
-import rateLimit from "express-rate-limit";
-
-const app = express();
-
-const formLimiter = rateLimit({
-  windowMs: 60 * 60 * 1000,
-  max: 5,
-});
-
-app.use("/sendEmail", formLimiter);
 
 export async function sendEmail(formData) {
-  const honey = formData.get("honey");
+  const honey = formData.get("_honey");
 
   try {
-    if (honey === null) {
+    if (!honey) {
       const recaptchaToken = formData.get("recaptchaToken");
       const recaptchaResult = await verifyRecaptchaToken(recaptchaToken);
 
       if (!recaptchaResult.success) {
         console.error("reCAPTCHA verification failed:", recaptchaResult.error);
-        return;
+        return { success: false, error: "recaptcha" };
       }
 
       const name = formData.get("fullName");
@@ -58,11 +47,14 @@ export async function sendEmail(formData) {
       };
 
       await transporter.sendMail(mailOptions);
+      return { success: true };
     } else {
       console.error("Invalid form submission due to non-empty honeypot field");
+      return { success: false, error: "spam" };
     }
   } catch (error) {
     console.error(error);
+    return { success: false, error: "send" };
   }
 }
 

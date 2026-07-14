@@ -1,10 +1,19 @@
 import type { Metadata } from "next";
+import { Roboto } from "next/font/google";
 
 import Footer from "@/_components/navigation/footer";
 import Header from "@/_components/navigation/header";
 import FacebookPixel from "@/_components/facebook-pixel";
 
 import "@/_styles/globals.css";
+
+const roboto = Roboto({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "700"],
+  style: ["normal", "italic"],
+  display: "swap",
+  variable: "--font-roboto",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.thewrightdesigns.co.za"),
@@ -43,7 +52,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" data-scroll-behavior="smooth">
+    <html lang="en" data-scroll-behavior="smooth" className={roboto.variable}>
       <head>
         <script
           type="application/ld+json"

@@ -3,6 +3,7 @@
 import { usePathname } from "next/navigation";
 import classNames from "classnames";
 import ContactForm from "@/_components/contact-form";
+import RecaptchaProvider from "@/_components/recaptcha-provider";
 import Link from "next/link";
 
 export default function RecentProjectsLayout({
@@ -47,7 +48,9 @@ export default function RecentProjectsLayout({
       </div>
       {children}
       <div id="contact" className="-translate-y-32"></div>
-      <ContactForm cssClasses="-mx-7 px-7 py-10 tablet:-mx-10 tablet:px-10 desktopSmall:mx-0 desktopSmall:rounded-lg desktopSmall:p-6" />
+      <RecaptchaProvider>
+        <ContactForm cssClasses="-mx-7 px-7 py-10 tablet:-mx-10 tablet:px-10 desktopSmall:mx-0 desktopSmall:rounded-lg desktopSmall:p-6" />
+      </RecaptchaProvider>
     </main>
   );
 }

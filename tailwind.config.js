@@ -46,8 +46,7 @@ export default {
       ],
     },
     fontFamily: {
-      roboto: "Roboto",
-      robotoMono: "Roboto Mono",
+      roboto: ["var(--font-roboto)", "Tahoma", "sans-serif"],
     },
     screens: {
       phone: "425px",

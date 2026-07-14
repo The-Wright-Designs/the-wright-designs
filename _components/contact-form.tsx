@@ -13,6 +13,7 @@ interface Props {
 const ContactForm = ({ cssClasses }: Props) => {
   const [showMessage, setShowMessage] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState(false);
   const { executeRecaptcha } = useGoogleReCaptcha();
 
   useEffect(() => {
@@ -27,10 +28,18 @@ const ContactForm = ({ cssClasses }: Props) => {
   return (
     <section className={`bg-blue ${cssClasses}`}>
       {!formSubmitted ? (
-        <p className="text-beige mb-6">
-          Get in touch and let&apos;s discuss how we can enhance your online
-          presence.
-        </p>
+        <>
+          <p className="text-beige mb-6">
+            Get in touch and let&apos;s discuss how we can enhance your online
+            presence.
+          </p>
+          {submitError && (
+            <p className="text-pink mb-6 text-[18px] font-bold">
+              Sorry, your message couldn&apos;t be sent — reCAPTCHA verification
+              failed. Please try again.
+            </p>
+          )}
+        </>
       ) : (
         <>
           <div id="email-submitted"></div>
@@ -43,9 +52,15 @@ const ContactForm = ({ cssClasses }: Props) => {
       {!formSubmitted && (
         <form
           action={async (formData) => {
+            if (!executeRecaptcha) return;
+            setSubmitError(false);
             const recaptchaToken = await executeRecaptcha("contact_form");
             formData.append("recaptchaToken", recaptchaToken);
-            await sendEmail(formData);
+            const result = await sendEmail(formData);
+            if (!result?.success) {
+              setSubmitError(true);
+              return;
+            }
             if (typeof window !== "undefined" && window.fbq) {
               window.fbq("track", "Lead");
             }

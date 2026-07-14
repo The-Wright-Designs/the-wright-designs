@@ -2,12 +2,10 @@
 
 import Link from "next/link";
 import { useState, Suspense, lazy } from "react";
-import {
-  GoogleReCaptchaProvider,
-  useGoogleReCaptcha,
-} from "react-google-recaptcha-v3";
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
 import ContactForm from "@/_components/contact-form";
+import RecaptchaProvider from "@/_components/recaptcha-provider";
 import { showEmailAddress, showPhoneNumber } from "@/_actions/actions";
 
 import data from "@/_data/general-data.json";
@@ -27,10 +25,13 @@ const ContactInnerComponent = ({ cssClasses }: Props) => {
   const [showEmail, setShowEmail] = useState("Show email address");
   const [showSpinnerPhone, setShowSpinnerPhone] = useState(false);
   const [showSpinnerEmail, setShowSpinnerEmail] = useState(false);
+  const [phoneError, setPhoneError] = useState(false);
+  const [emailError, setEmailError] = useState(false);
   const { executeRecaptcha } = useGoogleReCaptcha();
 
   const handleShowPhoneNumber = async () => {
     setShowSpinnerPhone(true);
+    setPhoneError(false);
     const token = await executeRecaptcha("show_phone");
     const phoneNumber = await showPhoneNumber(token);
     if (phoneNumber) {
@@ -38,12 +39,15 @@ const ContactInnerComponent = ({ cssClasses }: Props) => {
       if (typeof window !== "undefined" && window.fbq) {
         window.fbq("track", "Contact");
       }
+    } else {
+      setPhoneError(true);
     }
     setShowSpinnerPhone(false);
   };
 
   const handleShowEmailAddress = async () => {
     setShowSpinnerEmail(true);
+    setEmailError(false);
     const token = await executeRecaptcha("show_email");
     const emailAddress = await showEmailAddress(token);
     if (emailAddress) {
@@ -51,12 +55,14 @@ const ContactInnerComponent = ({ cssClasses }: Props) => {
       if (typeof window !== "undefined" && window.fbq) {
         window.fbq("track", "Contact");
       }
+    } else {
+      setEmailError(true);
     }
     setShowSpinnerEmail(false);
   };
 
   return (
-    <section className={`drop-shadow-md tablet:mb-10 ${cssClasses}`}>
+    <section className={`shadow-md tablet:mb-10 ${cssClasses}`}>
       <h2 className="text-subheading mb-10 pb-1 border-b-4 border-pink tablet:col-span-2 desktopSmall:col-span-1">
         Contact
       </h2>
@@ -84,6 +90,11 @@ const ContactInnerComponent = ({ cssClasses }: Props) => {
                 {showEmail}
               </Link>
             )}
+            {emailError && (
+              <p className="text-pink text-[14px] tablet:col-start-2">
+                reCAPTCHA verification failed. Please try again.
+              </p>
+            )}
           </div>
           <div className="grid gap-3 tablet:grid-cols-[100px_1fr]">
             <h3 className="text-paragraph font-bold">Phone:</h3>
@@ -106,6 +117,11 @@ const ContactInnerComponent = ({ cssClasses }: Props) => {
               >
                 {showPhone}
               </Link>
+            )}
+            {phoneError && (
+              <p className="text-pink text-[14px] tablet:col-start-2">
+                reCAPTCHA verification failed. Please try again.
+              </p>
             )}
           </div>
           <div className="grid gap-3 tablet:grid-cols-[100px_1fr]">
@@ -136,12 +152,9 @@ const ContactInnerComponent = ({ cssClasses }: Props) => {
 
 const ContactComponent = ({ cssClasses }: Props) => {
   return (
-    <GoogleReCaptchaProvider
-      reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""}
-      useRecaptchaNet
-    >
+    <RecaptchaProvider>
       <ContactInnerComponent cssClasses={cssClasses} />
-    </GoogleReCaptchaProvider>
+    </RecaptchaProvider>
   );
 };
 

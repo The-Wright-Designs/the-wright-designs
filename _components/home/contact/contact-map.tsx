@@ -29,6 +29,9 @@ const ContactMap = ({ cssClasses }: Props) => {
       zoom={15}
       center={{ lat: -34.073712234443335, lng: 23.362552963650543 }}
       mapContainerClassName={`${cssClasses}`}
+      options={{
+        gestureHandling: "cooperative",
+      }}
     >
       <MarkerF
         position={{ lat: -34.073712234443335, lng: 23.362552963650543 }}

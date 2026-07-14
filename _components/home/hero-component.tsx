@@ -51,10 +51,10 @@ const HeroComponent = ({ cssClasses }: Props) => {
               <li className="text-white tracking-[0.15px] border-b border-white/25 pb-3">
                 Web development (Frontend & backend)
               </li>
-              <li className="text-white tracking-[0.15px]">
+              <li className="text-white tracking-[0.15px]  border-b border-white/25 pb-3">
                 Domain & hosting solutions
               </li>
-              <li className="text-white tracking-[0.15px] border-b border-white/25 pb-3">
+              <li className="text-white tracking-[0.15px]">
                 Ongoing maintenance
               </li>
               <li className="mt-2">
@@ -81,10 +81,10 @@ const HeroComponent = ({ cssClasses }: Props) => {
               Frontend & backend development
             </li>
 
-            <li className="text-white tracking-[0.15px]">
+            <li className="text-white tracking-[0.15px] border-b border-white/25 pb-3">
               Domain & hosting solutions
             </li>
-            <li className="text-white tracking-[0.15px] border-b border-white/25 pb-3">
+            <li className="text-white tracking-[0.15px]">
               Ongoing maintenance
             </li>
 
