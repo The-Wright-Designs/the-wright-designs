@@ -36,7 +36,8 @@ const Button = ({
   const [arrowMove, setArrowMove] = useState(false);
 
   const buttonClasses = classNames(
-    `flex gap-3 items-center justify-center px-5 py-[14px] rounded-xl shadow-md uppercase tracking-[0.72px] font-medium text-[18px] ease-in-out duration-300 ${cssClasses}`,
+    "flex gap-3 items-center justify-center px-5 py-[14px] rounded-xl shadow-md uppercase tracking-[0.72px] font-medium text-[18px] ease-in-out duration-300 desktop:hover:cursor-pointer",
+    cssClasses,
     {
       "bg-pink tablet:hover:bg-pink/95 text-white":
         buttonColor === "pink" && !outline,

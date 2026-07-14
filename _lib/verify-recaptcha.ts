@@ -31,7 +31,7 @@ export async function verifyRecaptchaToken(
       };
     }
 
-    if (data.score < 0.6) {
+    if (typeof data.score !== "number" || data.score < 0.6) {
       return {
         success: false,
         score: data.score,

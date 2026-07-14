@@ -66,7 +66,7 @@ const OurClientsSlideshow = ({ cssClasses }: Props) => {
           <Link
             href={url}
             target="_blank"
-            className="hover:desktopSmall:opacity-90 ease-in-out duration-150 hover"
+            className="desktop:hover:opacity-90 ease-in-out duration-150"
             aria-label="Our clients"
           >
             <Image
@@ -74,7 +74,7 @@ const OurClientsSlideshow = ({ cssClasses }: Props) => {
               alt={alt}
               width={200}
               height={80}
-              className={`object-contain w-auto drop-shadow-md mx-auto h-[80px] max-w-[125px] phone:max-w-[200px] tablet:hover:opacity-90 tablet:w-[250px] tablet:h-[100px] desktopSmall:w-[70px] desktopSmall:h-[85px]`}
+              className="object-contain w-auto drop-shadow-md mx-auto h-[80px] max-w-[125px] phone:max-w-[200px] tablet:w-[250px] tablet:h-[100px] desktopSmall:w-[70px] desktopSmall:h-[85px]"
               sizes="(max-width: 425px) 50vw, (max-width:900px) 25vw, 10vw"
             />
           </Link>

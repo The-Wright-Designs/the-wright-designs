@@ -50,8 +50,8 @@ const Header = () => {
                     "scale-[0.8]": isScrolled,
                   },
                 )}
-                width={274}
-                height={60}
+                width={1050}
+                height={203}
                 sizes="(max-width: 425px) 0vw, (max-width: 800px) 20vw, 15vw"
                 priority
               />

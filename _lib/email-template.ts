@@ -1,4 +1,18 @@
-export const emailTemplate = ({ name, email, message }) => {
+const escapeHtml = (value: string) =>
+  value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+
+interface EmailTemplateArgs {
+  name: string;
+  email: string;
+  message: string;
+}
+
+export const emailTemplate = ({ name, email, message }: EmailTemplateArgs) => {
   return `<html lang="en">
   <head>
     <meta charSet="UTF-8" />
@@ -19,15 +33,21 @@ export const emailTemplate = ({ name, email, message }) => {
         <td>
           <h3 style="font-size: 1.25rem">Website form submission</h3>
           <p style="font-size: 1rem; margin-top: 1rem; font-weight: 500;">
-            Name: <span style="font-weight: 200; font-style: italic;">${name}</span>
+            Name: <span style="font-weight: 200; font-style: italic;">${escapeHtml(
+              name,
+            )}</span>
           </p>
           <p style="font-size: 1rem; font-weight: 500;">
-            Email address: <span style="font-weight: 200; font-style: italic;">${email}</span>
+            Email address: <span style="font-weight: 200; font-style: italic;">${escapeHtml(
+              email,
+            )}</span>
           </p>
           <p style="font-size: 1rem; font-weight: 500;">
             Message:
             <br />
-            <span style="font-weight: 200; font-style: italic;">${message}</span>
+            <span style="font-weight: 200; font-style: italic;">${escapeHtml(
+              message,
+            )}</span>
           </p>
         </td>
       </tr>

@@ -1,8 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
+import classNames from "classnames";
 
 import data from "@/_data/general-data.json";
 import SocialIcons from "@/_lib/social-icons";
+import { normalizeNavUrl } from "@/_utils/normalize-nav-url";
 
 const { navigation } = data;
 
@@ -12,16 +14,19 @@ interface Props {
 
 const Footer = ({ cssClasses }: Props) => {
   return (
-    <footer className={`pt-12 pb-8 tablet:pb-5 tablet:bg-blue ${cssClasses}`}>
+    <footer
+      className={classNames("pt-12 pb-8 tablet:pb-5 tablet:bg-blue", cssClasses)}
+    >
       <div className="flex gap-10 flex-col px-5 items-center tablet:px-10 tablet:grid grid-cols-2 tablet:gap-5 desktop:max-w-[1280px] desktop:mx-auto">
         <div>
           <nav className="hidden tablet:block">
             <ul className="flex flex-col font-light text-[14px] gap-1">
               {navigation.map((item, index) => (
-                <li key={index} className="text-beige hover:text-pink mr-auto">
-                  <Link
-                    href={item.url.startsWith("/") ? item.url : `/#${item.url}`}
-                  >
+                <li
+                  key={index}
+                  className="text-beige desktop:hover:text-pink mr-auto"
+                >
+                  <Link href={normalizeNavUrl(item.url)}>
                     {item.title}
                   </Link>
                 </li>
@@ -39,8 +44,8 @@ const Footer = ({ cssClasses }: Props) => {
             src="/assets/the-wright-designs-logo.png"
             alt="The Wright Designs logo"
             className="w-[200px] h-auto tablet:self-end rotate-1"
-            width={200}
-            height={52}
+            width={1050}
+            height={203}
           />
         </Link>
         <h4 className="text-center font-light text-paragraph tablet:text-[14px] tablet:text-beige col-span-2 place-self-center normal-case">

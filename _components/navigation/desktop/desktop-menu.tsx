@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import data from "@/_data/general-data.json";
 import classNames from "classnames";
+import { normalizeNavUrl } from "@/_utils/normalize-nav-url";
 
 const { navigation } = data;
 
@@ -21,9 +22,9 @@ const DesktopMenu = ({ cssClasses }: Props) => {
         {navigation.map((item, index) => (
           <li key={index}>
             <Link
-              href={item.url.startsWith("/") ? item.url : `/#${item.url}`}
+              href={normalizeNavUrl(item.url)}
               className={classNames(
-                "desktop:hover:cursor-pointer text-beige hover:underline hover:underline-offset-8 decoration-pink decoration-[2.5px]",
+                "desktop:hover:cursor-pointer text-beige desktop:hover:underline desktop:hover:underline-offset-8 decoration-pink decoration-[2.5px]",
                 {
                   "font-normal":
                     item.url === currentRoute ||

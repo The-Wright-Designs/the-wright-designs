@@ -5,12 +5,21 @@ import nodemailer from "nodemailer";
 import { emailTemplate } from "@/_lib/email-template";
 import { verifyRecaptchaToken } from "@/_lib/verify-recaptcha";
 
-export async function sendEmail(formData) {
+type SendEmailResult = {
+  success: boolean;
+  error?: "recaptcha" | "spam" | "send" | "invalid";
+};
+
+export async function sendEmail(formData: FormData): Promise<SendEmailResult> {
   const honey = formData.get("_honey");
 
   try {
     if (!honey) {
       const recaptchaToken = formData.get("recaptchaToken");
+      if (typeof recaptchaToken !== "string") {
+        return { success: false, error: "recaptcha" };
+      }
+
       const recaptchaResult = await verifyRecaptchaToken(recaptchaToken);
 
       if (!recaptchaResult.success) {
@@ -22,6 +31,20 @@ export async function sendEmail(formData) {
       const email = formData.get("emailAddress");
       const message = formData.get("message");
 
+      if (
+        typeof name !== "string" ||
+        !name.trim() ||
+        name.length > 200 ||
+        typeof email !== "string" ||
+        !/^\S+@\S+\.\S+$/.test(email) ||
+        email.length > 254 ||
+        typeof message !== "string" ||
+        !message.trim() ||
+        message.length > 5000
+      ) {
+        return { success: false, error: "invalid" };
+      }
+
       const emailHtmlContent = emailTemplate({
         name,
         email,
@@ -30,7 +53,7 @@ export async function sendEmail(formData) {
 
       const transporter = nodemailer.createTransport({
         host: process.env.SMTP_HOST,
-        port: process.env.SMTP_PORT,
+        port: Number(process.env.SMTP_PORT),
         secure: false,
         auth: {
           user: process.env.SMTP_USER,
@@ -62,7 +85,7 @@ const {
   contact: { email, phone },
 } = data;
 
-export const showEmailAddress = async (token) => {
+export const showEmailAddress = async (token: string): Promise<string | null> => {
   const result = await verifyRecaptchaToken(token);
   if (!result.success) {
     console.error("reCAPTCHA verification failed:", result.error);
@@ -71,7 +94,7 @@ export const showEmailAddress = async (token) => {
   return email;
 };
 
-export const showPhoneNumber = async (token) => {
+export const showPhoneNumber = async (token: string): Promise<string | null> => {
   const result = await verifyRecaptchaToken(token);
   if (!result.success) {
     console.error("reCAPTCHA verification failed:", result.error);

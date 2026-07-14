@@ -24,7 +24,7 @@ export default function RecentProjectsLayout({
             {
               "bg-blue text-white":
                 currentRoute === "/recent-projects/websites",
-              "hover:bg-pink/60 hover:text-white":
+              "desktop:hover:bg-pink/60 desktop:hover:text-white":
                 currentRoute !== "/recent-projects/websites",
             },
           )}
@@ -38,7 +38,7 @@ export default function RecentProjectsLayout({
             "text-[20px] py-2 ease-in-out duration-300 border-2 border-blue text-center",
             {
               "bg-blue text-white": currentRoute === "/recent-projects/apps",
-              "hover:bg-pink/60 hover:text-white":
+              "desktop:hover:bg-pink/60 desktop:hover:text-white":
                 currentRoute !== "/recent-projects/apps",
             },
           )}

@@ -8,6 +8,7 @@ import classNames from "classnames";
 import data from "@/_data/general-data.json";
 import SocialIcons from "@/_lib/social-icons";
 import ArrowSvg from "@/_lib/arrow-svg";
+import { normalizeNavUrl } from "@/_utils/normalize-nav-url";
 
 const { navigation } = data;
 
@@ -33,7 +34,7 @@ const MobileMenuToggle = ({ onClick, cssClasses }: Props) => {
             )}
           >
             <Link
-              href={item.url.startsWith("/") ? item.url : `/#${item.url}`}
+              href={normalizeNavUrl(item.url)}
               className="py-2 px-3 -my-2 -mx-3"
               onClick={onClick}
             >

@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
+import classNames from "classnames";
 
 import Button from "@/_components/button";
 import { sendEmail } from "@/_actions/actions";
@@ -13,7 +14,7 @@ interface Props {
 const ContactForm = ({ cssClasses }: Props) => {
   const [showMessage, setShowMessage] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
-  const [submitError, setSubmitError] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
   const { executeRecaptcha } = useGoogleReCaptcha();
 
   useEffect(() => {
@@ -26,7 +27,7 @@ const ContactForm = ({ cssClasses }: Props) => {
   }, [formSubmitted]);
 
   return (
-    <section className={`bg-blue ${cssClasses}`}>
+    <section className={classNames("bg-blue", cssClasses)}>
       {!formSubmitted ? (
         <>
           <p className="text-beige mb-6">
@@ -35,8 +36,9 @@ const ContactForm = ({ cssClasses }: Props) => {
           </p>
           {submitError && (
             <p className="text-pink mb-6 text-[18px] font-bold">
-              Sorry, your message couldn&apos;t be sent — reCAPTCHA verification
-              failed. Please try again.
+              {submitError === "invalid"
+                ? "Please check that your name, email address and message are filled in correctly and try again."
+                : "Sorry, your message couldn't be sent — reCAPTCHA verification failed. Please try again."}
             </p>
           )}
         </>
@@ -53,16 +55,21 @@ const ContactForm = ({ cssClasses }: Props) => {
         <form
           action={async (formData) => {
             if (!executeRecaptcha) return;
-            setSubmitError(false);
+            setSubmitError(null);
             const recaptchaToken = await executeRecaptcha("contact_form");
             formData.append("recaptchaToken", recaptchaToken);
             const result = await sendEmail(formData);
             if (!result?.success) {
-              setSubmitError(true);
+              setSubmitError(result?.error ?? "send");
               return;
             }
             if (typeof window !== "undefined" && window.fbq) {
               window.fbq("track", "Lead");
+            }
+            if (typeof window !== "undefined" && window.gtag) {
+              window.gtag("event", "conversion", {
+                send_to: "AW-XXXXXXX/XXXX",
+              });
             }
             setFormSubmitted(true);
           }}

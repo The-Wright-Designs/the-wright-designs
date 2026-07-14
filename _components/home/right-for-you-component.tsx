@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
+import classNames from "classnames";
 
 const RightForYouComponent = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -20,7 +21,7 @@ const RightForYouComponent = () => {
   return (
     <section className="mb-15">
       <h2 className="text-subheading mb-10 pb-1 border-b-4 border-pink tablet:col-span-2 desktopSmall:col-span-1">
-        Are we right for you?
+        FAQs
       </h2>
       <p>
         Our vast experience in the industry means that, although we might not
@@ -39,15 +40,22 @@ const RightForYouComponent = () => {
         {accordionData.map((item, index) => (
           <li
             key={index}
-            className={`px-4 py-6 bg-blue text-white w-full rounded-md ease-in-out duration-200 hover:cursor-pointer ${
-              openIndex !== index ? "desktopSmall:hover:bg-pink" : "bg-pink"
-            }`}
-            onClick={() => toggleAccordion(index)}
+            className={classNames(
+              "px-4 py-6 bg-blue text-white w-full rounded-md ease-in-out duration-200",
+              openIndex !== index ? "desktopSmall:hover:bg-pink" : "bg-pink",
+            )}
           >
-            <p
-              className={`font-medium text-[17px] text-left text-white flex justify-between gap-4 w-full ease-in-out duration-75 ${
-                index === openIndex && "border-b-2 border-white pb-4"
-              }`}
+            <button
+              type="button"
+              onClick={() => toggleAccordion(index)}
+              aria-expanded={openIndex === index}
+              aria-controls={`faq-answer-${index}`}
+              className={classNames(
+                "font-medium text-[17px] text-left text-white flex justify-between gap-4 w-full ease-in-out duration-75 desktop:hover:cursor-pointer",
+                {
+                  "border-b-2 border-white pb-4": index === openIndex,
+                },
+              )}
             >
               {item.question}
               <span>
@@ -57,21 +65,23 @@ const RightForYouComponent = () => {
                   viewBox="0 0 24 12"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  className={`ease-in-out duration-200 w-4 ${
-                    openIndex === index ? "rotate-90" : ""
-                  }`}
+                  className={classNames("ease-in-out duration-200 w-4", {
+                    "rotate-90": openIndex === index,
+                  })}
                 >
                   <path d="M12 12L0 0H24L12 12Z" fill="#FFFFFF" />
                 </svg>
               </span>
-            </p>
+            </button>
             <div
+              id={`faq-answer-${index}`}
               ref={(el) => {
                 contentRefs.current[index] = el;
               }}
-              className={`transition-max-height duration-200 ease-in-out overflow-hidden ${
-                openIndex === index ? "max-h-screen" : "max-h-0"
-              }`}
+              className={classNames(
+                "transition-max-height duration-200 ease-in-out overflow-hidden",
+                openIndex === index ? "max-h-screen" : "max-h-0",
+              )}
               style={{
                 maxHeight:
                   openIndex === index

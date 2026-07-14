@@ -18,9 +18,10 @@ const HeroComponent = ({ cssClasses }: Props) => {
             alt="Decorative art image"
             width={800}
             height={1100}
-            className="tablet:hidden absolute top-0 left-0 -z-10 h-[400px] min-[380px]:h-[450px] phone::h-[500px] phone:object-top object-cover"
+            className="tablet:hidden absolute top-0 left-0 -z-10 h-[400px] min-[380px]:h-[450px] phone:h-[500px] phone:object-top object-cover"
             sizes="(max-width: 425px) 100vw, 100vw"
             priority
+            fetchPriority="high"
           />
           <h1 className="text-[24px] tracking-[0.48px] leading-[120%] font-extralight uppercase grid gap-y-1.5 pb-3 border-b-4 border-pink min-[320px]:grid-cols-[1fr_0px] phone:grid-cols-1 desktopSmall:grid-cols-[1fr_37px] desktopSmall:text-[21.75px] desktopSmall:gap-x-5 desktopSmall:font-normal desktopSmall:max-h-[231.52px]">
             <span className="min-[320px]:col-span-2 phone:col-span-1">

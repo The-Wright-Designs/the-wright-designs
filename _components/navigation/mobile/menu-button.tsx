@@ -9,7 +9,10 @@ interface Props {
 const MenuButton = ({ onClick, showMenuToggle, cssClasses }: Props) => {
   return (
     <button
-      className={`relative px-4 py-5 -m-3 z-20 desktopSmall:hidden ease-in-out duration-300 ${cssClasses}`}
+      className={classNames(
+        "relative px-4 py-5 -m-3 z-20 desktopSmall:hidden ease-in-out duration-300 desktop:hover:cursor-pointer",
+        cssClasses,
+      )}
       onClick={onClick}
       aria-label="Open and close navigation menu"
     >

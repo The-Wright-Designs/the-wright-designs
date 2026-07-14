@@ -4,6 +4,7 @@ import { Roboto } from "next/font/google";
 import Footer from "@/_components/navigation/footer";
 import Header from "@/_components/navigation/header";
 import FacebookPixel from "@/_components/facebook-pixel";
+import GoogleAds from "@/_components/google-ads";
 
 import "@/_styles/globals.css";
 
@@ -17,6 +18,10 @@ const roboto = Roboto({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.thewrightdesigns.co.za"),
+  title: {
+    default: "The Wright Designs",
+    template: "%s | The Wright Designs",
+  },
   description:
     "A web design & web development team, based in Plettenberg Bay, dedicated to providing modern online solutions for small to medium sized businesses",
   keywords:
@@ -30,8 +35,14 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/assets/open-graph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "The Wright Designs",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
   },
 };
 
@@ -61,6 +72,7 @@ export default function RootLayout({
       </head>
       <body>
         <FacebookPixel />
+        <GoogleAds />
         <Header />
         <div className="px-5 overflow-x-hidden tablet:px-10 desktop:px-0 desktop:max-w-[1280px] desktop:m-auto">
           {children}

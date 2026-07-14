@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState, Suspense, lazy } from "react";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
+import classNames from "classnames";
 
 import ContactForm from "@/_components/contact-form";
 import RecaptchaProvider from "@/_components/recaptcha-provider";
@@ -62,7 +63,7 @@ const ContactInnerComponent = ({ cssClasses }: Props) => {
   };
 
   return (
-    <section className={`shadow-md tablet:mb-10 ${cssClasses}`}>
+    <section className={classNames("shadow-md tablet:mb-10", cssClasses)}>
       <h2 className="text-subheading mb-10 pb-1 border-b-4 border-pink tablet:col-span-2 desktopSmall:col-span-1">
         Contact
       </h2>
@@ -73,7 +74,7 @@ const ContactInnerComponent = ({ cssClasses }: Props) => {
             {showEmail === "Show email address" ? (
               <button
                 onClick={handleShowEmailAddress}
-                className="text-paragraph self-center py-3 px-2 -my-3 -mx-2 hover:tablet:text-pink hover:cursor-pointer tablet:p-0 tablet:m-0 italic text-linkBlue place-self-start"
+                className="text-paragraph self-center py-3 px-2 -my-3 -mx-2 desktop:hover:text-pink desktop:hover:cursor-pointer tablet:p-0 tablet:m-0 italic text-linkBlue place-self-start"
                 aria-label="Show email address"
               >
                 {showSpinnerEmail ? (
@@ -101,7 +102,7 @@ const ContactInnerComponent = ({ cssClasses }: Props) => {
             {showPhone === "Show phone number" ? (
               <button
                 onClick={handleShowPhoneNumber}
-                className="text-paragraph self-center py-3 px-2 -my-3 -mx-2 hover:tablet:text-pink hover:cursor-pointer tablet:p-0 tablet:m-0 italic text-linkBlue place-self-start"
+                className="text-paragraph self-center py-3 px-2 -my-3 -mx-2 desktop:hover:text-pink desktop:hover:cursor-pointer tablet:p-0 tablet:m-0 italic text-linkBlue place-self-start"
                 aria-label="Show phone number"
               >
                 {showSpinnerPhone ? (

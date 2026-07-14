@@ -1,3 +1,5 @@
+import classNames from "classnames";
+
 import OurClientsSlideshow from "@/_lib/our-clients-slideshow";
 
 interface Props {
@@ -6,7 +8,7 @@ interface Props {
 
 const OurClientsComponent = ({ cssClasses }: Props) => {
   return (
-    <article className={`my-15 ${cssClasses}`}>
+    <article className={classNames("my-15", cssClasses)}>
       <h2 className="text-subheading pb-1 border-b-4 border-blue mb-10">
         Our Clients
       </h2>
