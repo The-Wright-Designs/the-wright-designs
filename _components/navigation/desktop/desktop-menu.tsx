@@ -24,7 +24,7 @@ const DesktopMenu = ({ cssClasses }: Props) => {
             <Link
               href={normalizeNavUrl(item.url)}
               className={classNames(
-                "desktop:hover:cursor-pointer text-beige desktop:hover:underline desktop:hover:underline-offset-8 decoration-pink decoration-[2.5px]",
+                "desktopSmall:hover:cursor-pointer text-beige desktopSmall:hover:underline desktopSmall:hover:underline-offset-8 decoration-pink decoration-[2.5px]",
                 {
                   "font-normal":
                     item.url === currentRoute ||

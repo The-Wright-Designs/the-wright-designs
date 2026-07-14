@@ -48,7 +48,7 @@ const MobileMenuToggle = ({ onClick, cssClasses }: Props) => {
           </li>
         ))}
         <li>
-          <SocialIcons cssClasses="mt-7" pink />
+          <SocialIcons cssClasses="mt-7" />
         </li>
       </ul>
     </nav>

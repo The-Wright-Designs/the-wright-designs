@@ -13,9 +13,14 @@ interface Props {
 }
 
 const Footer = ({ cssClasses }: Props) => {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer
-      className={classNames("pt-12 pb-8 tablet:pb-5 tablet:bg-blue", cssClasses)}
+      className={classNames(
+        "pt-12 pb-8 tablet:pb-5 tablet:bg-blue",
+        cssClasses,
+      )}
     >
       <div className="flex gap-10 flex-col px-5 items-center tablet:px-10 tablet:grid grid-cols-2 tablet:gap-5 desktop:max-w-[1280px] desktop:mx-auto">
         <div>
@@ -24,21 +29,19 @@ const Footer = ({ cssClasses }: Props) => {
               {navigation.map((item, index) => (
                 <li
                   key={index}
-                  className="text-beige desktop:hover:text-pink mr-auto"
+                  className="text-beige desktopSmall:hover:text-pink mr-auto"
                 >
-                  <Link href={normalizeNavUrl(item.url)}>
-                    {item.title}
-                  </Link>
+                  <Link href={normalizeNavUrl(item.url)}>{item.title}</Link>
                 </li>
               ))}
             </ul>
           </nav>
-          <SocialIcons cssClasses="tablet:hidden" pink />
-          <SocialIcons cssClasses="mt-2 hidden tablet:flex" pink small />
+          <SocialIcons cssClasses="tablet:hidden" />
+          <SocialIcons cssClasses="mt-2 hidden tablet:flex" beige />
         </div>
         <Link
           href="/"
-          className="hidden place-self-end tablet:block tablet:hover:opacity-90"
+          className="hidden place-self-end tablet:block desktopSmall:hover:opacity-90"
         >
           <Image
             src="/assets/the-wright-designs-logo.png"
@@ -49,8 +52,8 @@ const Footer = ({ cssClasses }: Props) => {
           />
         </Link>
         <h4 className="text-center font-light text-paragraph tablet:text-[14px] tablet:text-beige col-span-2 place-self-center normal-case">
-          © The Wright Designs |{" "}
-          <Link href="/" className="tablet:hover:text-pink">
+          © {currentYear} The Wright Designs |{" "}
+          <Link href="/" className="desktopSmall:hover:text-pink">
             www.thewrightdesigns.co.za
           </Link>
         </h4>

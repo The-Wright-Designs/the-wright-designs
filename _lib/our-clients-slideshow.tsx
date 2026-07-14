@@ -66,7 +66,7 @@ const OurClientsSlideshow = ({ cssClasses }: Props) => {
           <Link
             href={url}
             target="_blank"
-            className="desktop:hover:opacity-90 ease-in-out duration-150"
+            className="desktopSmall:hover:opacity-90 ease-in-out duration-150"
             aria-label="Our clients"
           >
             <Image

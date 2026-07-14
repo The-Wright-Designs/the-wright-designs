@@ -51,7 +51,7 @@ const FaqsComponent = () => {
               aria-expanded={openIndex === index}
               aria-controls={`faq-answer-${index}`}
               className={classNames(
-                "font-medium text-[17px] text-left text-white flex justify-between gap-4 w-full ease-in-out duration-75 desktop:hover:cursor-pointer",
+                "font-medium text-[17px] text-left text-white flex justify-between gap-4 w-full ease-in-out duration-75 desktopSmall:hover:cursor-pointer",
                 {
                   "border-b-2 border-white pb-4": index === openIndex,
                 },

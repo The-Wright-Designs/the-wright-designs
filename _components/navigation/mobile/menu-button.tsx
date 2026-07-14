@@ -10,7 +10,7 @@ const MenuButton = ({ onClick, showMenuToggle, cssClasses }: Props) => {
   return (
     <button
       className={classNames(
-        "relative px-4 py-5 -m-3 z-20 desktopSmall:hidden ease-in-out duration-300 desktop:hover:cursor-pointer",
+        "relative px-4 py-5 -m-3 z-20 desktopSmall:hidden ease-in-out duration-300 desktopSmall:hover:cursor-pointer",
         cssClasses,
       )}
       onClick={onClick}
@@ -23,7 +23,7 @@ const MenuButton = ({ onClick, showMenuToggle, cssClasses }: Props) => {
             {
               "rotate-[225deg] translate-x-[0px] translate-y-[4px]":
                 showMenuToggle,
-            }
+            },
           )}
         ></div>
         <div
@@ -32,7 +32,7 @@ const MenuButton = ({ onClick, showMenuToggle, cssClasses }: Props) => {
             {
               "rotate-[135deg] translate-x-[0px] -translate-y-[5px]":
                 showMenuToggle,
-            }
+            },
           )}
         ></div>
       </div>

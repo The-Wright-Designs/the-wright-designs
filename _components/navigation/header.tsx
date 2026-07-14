@@ -40,7 +40,7 @@ const Header = () => {
       <div className="w-full desktop:max-w-[1280px] desktop:m-auto tablet:flex tablet:justify-between tablet:items-end">
         <div>
           <div className="flex justify-between items-center px-5 tablet:px-0">
-            <Link href="/" className="tablet:hover:opacity-95">
+            <Link href="/" className="desktopSmall:hover:opacity-95">
               <Image
                 src="/assets/the-wright-designs-logo.png"
                 alt="The Wright Designs logo"

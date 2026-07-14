@@ -36,16 +36,16 @@ const Button = ({
   const [arrowMove, setArrowMove] = useState(false);
 
   const buttonClasses = classNames(
-    "flex gap-3 items-center justify-center px-5 py-[14px] rounded-xl shadow-md uppercase tracking-[0.72px] font-medium text-[18px] ease-in-out duration-300 desktop:hover:cursor-pointer",
+    "flex gap-3 items-center justify-center px-5 py-[14px] rounded-xl shadow-md uppercase tracking-[0.72px] font-medium text-[18px] ease-in-out duration-300 desktopSmall:hover:cursor-pointer",
     cssClasses,
     {
-      "bg-pink tablet:hover:bg-pink/95 text-white":
+      "bg-pink desktopSmall:hover:bg-pink/95 text-white":
         buttonColor === "pink" && !outline,
-      "bg-blue tablet:hover:bg-blue/95 text-white":
+      "bg-blue desktopSmall:hover:bg-blue/95 text-white":
         buttonColor === "blue" && !outline,
-      "bg-beige tablet:hover:bg-beige/95 border-grey/50 text-blue":
+      "bg-beige desktopSmall:hover:bg-beige/95 border-grey/50 text-blue":
         buttonColor === "beige" && !outline,
-      "bg-transparent border-2 border-blue text-blue tablet:hover:bg-grey/10":
+      "bg-transparent border-2 border-blue text-blue desktopSmall:hover:bg-grey/10":
         outline && buttonColor === "blue",
       "bg-transparent border-2 border-pink text-pink":
         outline && buttonColor === "pink",

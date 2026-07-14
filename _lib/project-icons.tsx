@@ -23,7 +23,7 @@ const ProjectIcons = ({
         <Link
           href={websiteUrl}
           target="_blank"
-          className="tablet:hover:opacity-90"
+          className="desktopSmall:hover:opacity-90"
           aria-label={ariaLabel}
         >
           <svg
@@ -91,7 +91,7 @@ const ProjectIcons = ({
           <Link
             href={repoUrl}
             target="_blank"
-            className="tablet:hover:opacity-90"
+            className="desktopSmall:hover:opacity-90"
             aria-label={ariaLabel}
           >
             <svg
@@ -180,7 +180,7 @@ const ProjectIcons = ({
           <Link
             href={figmaUrl}
             target="_blank"
-            className="tablet:hover:opacity-90"
+            className="desktopSmall:hover:opacity-90"
             aria-label={ariaLabel}
           >
             <svg

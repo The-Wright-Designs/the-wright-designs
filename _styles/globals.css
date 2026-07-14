@@ -1,6 +1,47 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@plugin "tailwind-scrollbar-hide";
+
+@theme {
+    --color-*: initial;
+    --color-beige: #EAE3CD;
+    --color-blue: #353C42;
+    --color-pink: #C86B7B;
+    --color-grey: #9F9797;
+    --color-white: #FFFFFF;
+    --color-linkBlue: #0000EE;
+    --color-transparent: transparent;
+
+    --breakpoint-*: initial;
+    --breakpoint-phone: 425px;
+    --breakpoint-tablet: 800px;
+    --breakpoint-desktopSmall: 1100px;
+    --breakpoint-desktop: 1400px;
+
+    --font-roboto: var(--font-roboto), Tahoma, sans-serif;
+
+    --spacing-15: 60px;
+}
+
+@utility text-paragraph {
+    font-size: 1rem;
+    line-height: 145%;
+    letter-spacing: 0.0075rem;
+    font-weight: 300;
+}
+
+@utility text-subheading {
+    font-size: 2rem;
+    line-height: 140%;
+    letter-spacing: 0.06rem;
+    font-weight: 500;
+}
+
+@utility text-heading {
+    font-size: 2.5rem;
+    line-height: 140%;
+    letter-spacing: 0.075rem;
+    font-weight: 500;
+}
 
 @layer base {
     html {
@@ -43,8 +84,8 @@
         margin: -0.1rem auto;
     }
 
-    .spinner::before,
-    .spinner::after {
+    .spinner:before,
+    .spinner:after {
         content: "";
         width: 100%;
         height: 100%;
@@ -57,7 +98,7 @@
         animation: spin 1s linear infinite;
     }
 
-    .spinner::after {
+    .spinner:after {
         animation-delay: 0.5s;
     }
 
@@ -67,8 +108,8 @@
         position: relative;
     }
 
-    .small-spinner::before,
-    .small-spinner::after {
+    .small-spinner:before,
+    .small-spinner:after {
         content: "";
         width: 100%;
         height: 100%;
@@ -81,7 +122,7 @@
         animation: spin 1s linear infinite;
     }
 
-    .small-spinner::after {
+    .small-spinner:after {
         animation-delay: 0.5s;
     }
 

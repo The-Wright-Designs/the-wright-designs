@@ -7,6 +7,7 @@ import classNames from "classnames";
 
 import ContactForm from "@/_components/contact-form";
 import RecaptchaProvider from "@/_components/recaptcha-provider";
+import SocialIcons from "@/_lib/social-icons";
 import { showEmailAddress, showPhoneNumber } from "@/_actions/actions";
 
 import data from "@/_data/general-data.json";
@@ -63,7 +64,7 @@ const ContactInnerComponent = ({ cssClasses }: Props) => {
   };
 
   return (
-    <section className={classNames("shadow-md tablet:mb-10", cssClasses)}>
+    <section className={classNames("tablet:mb-10", cssClasses)}>
       <h2 className="text-subheading mb-10 pb-1 border-b-4 border-pink tablet:col-span-2 desktopSmall:col-span-1">
         Contact
       </h2>
@@ -74,7 +75,7 @@ const ContactInnerComponent = ({ cssClasses }: Props) => {
             {showEmail === "Show email address" ? (
               <button
                 onClick={handleShowEmailAddress}
-                className="text-paragraph self-center py-3 px-2 -my-3 -mx-2 desktop:hover:text-pink desktop:hover:cursor-pointer tablet:p-0 tablet:m-0 italic text-linkBlue place-self-start"
+                className="text-paragraph self-center py-3 px-2 -my-3 -mx-2 desktopSmall:hover:text-pink desktopSmall:hover:cursor-pointer tablet:p-0 tablet:m-0 italic text-linkBlue place-self-start"
                 aria-label="Show email address"
               >
                 {showSpinnerEmail ? (
@@ -86,7 +87,7 @@ const ContactInnerComponent = ({ cssClasses }: Props) => {
             ) : (
               <Link
                 href={`mailto:${showEmail}`}
-                className="text-paragraph self-center tablet:hover:text-pink place-self-start text-linkBlue"
+                className="text-paragraph self-center desktopSmall:hover:text-pink place-self-start text-linkBlue"
               >
                 {showEmail}
               </Link>
@@ -102,7 +103,7 @@ const ContactInnerComponent = ({ cssClasses }: Props) => {
             {showPhone === "Show phone number" ? (
               <button
                 onClick={handleShowPhoneNumber}
-                className="text-paragraph self-center py-3 px-2 -my-3 -mx-2 desktop:hover:text-pink desktop:hover:cursor-pointer tablet:p-0 tablet:m-0 italic text-linkBlue place-self-start"
+                className="text-paragraph self-center py-3 px-2 -my-3 -mx-2 desktopSmall:hover:text-pink desktopSmall:hover:cursor-pointer tablet:p-0 tablet:m-0 italic text-linkBlue place-self-start"
                 aria-label="Show phone number"
               >
                 {showSpinnerPhone ? (
@@ -114,7 +115,7 @@ const ContactInnerComponent = ({ cssClasses }: Props) => {
             ) : (
               <Link
                 href={`tel:${showPhone}`}
-                className="text-paragraph self-center tablet:hover:text-pink place-self-start text-linkBlue"
+                className="text-paragraph self-center desktopSmall:hover:text-pink place-self-start text-linkBlue"
               >
                 {showPhone}
               </Link>
@@ -127,18 +128,13 @@ const ContactInnerComponent = ({ cssClasses }: Props) => {
           </div>
           <div className="grid gap-3 tablet:grid-cols-[100px_1fr]">
             <h3 className="text-paragraph font-bold">Address:</h3>
-            <address className="text-paragraph self-center">
-              {address}
-            </address>
+            <address className="text-paragraph self-center">{address}</address>
           </div>
+          <SocialIcons cssClasses="mt-2" />
         </div>
         <Suspense
           fallback={
-            <div
-              className={
-                "border-2 bg-white text-black border-black text-[30px] grid place-items-center py-16 w-full h-full min-[800px]:order-2"
-              }
-            >
+            <div className="border-2 bg-white text-black border-black text-[30px] grid place-items-center py-16 w-full h-full min-[800px]:order-2">
               Map loading...
             </div>
           }

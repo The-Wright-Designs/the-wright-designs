@@ -50,7 +50,7 @@ const RescueHero = ({ cssClasses }: Props) => {
                 <Button
                   url="#contact"
                   buttonColor="beige"
-                  cssClasses="w-full desktop:hover:cursor-pointer"
+                  cssClasses="w-full desktopSmall:hover:cursor-pointer"
                 >
                   Rescue My Website
                 </Button>

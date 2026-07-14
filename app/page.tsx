@@ -16,13 +16,13 @@ export default function Home() {
     <>
       <HeroComponent cssClasses="mt-[104px]" />
       <OurClientsComponent cssClasses="desktopSmall:hidden" />
-      <div id="about" className="-translate-y-32"></div>
+      <div id="about" className="scroll-mt-20" />
       <AboutComponent />
-      <div id="services" className="-translate-y-32"></div>
+      <div id="services" className="scroll-mt-32" />
       <ServicesComponent />
-      <div id="faq" className="-translate-y-32"></div>
+      <div id="faqs" className="scroll-mt-32" />
       <FaqsComponent />
-      <div id="contact" className="-translate-y-32"></div>
+      <div id="contact" className="scroll-mt-32" />
       <ContactComponent />
     </>
   );

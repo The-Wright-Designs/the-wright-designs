@@ -54,7 +54,7 @@ const RescueReasons = () => {
         <Button
           url="#contact"
           buttonColor="pink"
-          cssClasses="w-full tablet:w-auto desktop:hover:cursor-pointer"
+          cssClasses="w-full tablet:w-auto desktopSmall:hover:cursor-pointer"
         >
           Get My Free Quote
         </Button>
