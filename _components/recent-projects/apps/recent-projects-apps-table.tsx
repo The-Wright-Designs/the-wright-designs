@@ -28,12 +28,12 @@ const RecentProjectsAppsTable = () => {
 
   return (
     <>
-      <div className={`bg-pink shadow-md ${gridLayout}`}>
-        <h2 className={`${headingItemStyling} border-l-0`}>Title</h2>
-        <h2 className={`${headingItemStyling}`}>Client</h2>
-        <h2 className={`${headingItemStyling}`}>Description</h2>
-        <h2 className={`${headingItemStyling}`}>Year</h2>
-        <h2 className={`${headingItemStyling}`}>Status</h2>
+      <div className={classNames("bg-pink shadow-md", gridLayout)}>
+        <h2 className={classNames(headingItemStyling, "border-l-0")}>Title</h2>
+        <h2 className={headingItemStyling}>Client</h2>
+        <h2 className={headingItemStyling}>Description</h2>
+        <h2 className={headingItemStyling}>Year</h2>
+        <h2 className={headingItemStyling}>Status</h2>
       </div>
       <ul className="grid">
         {sortedProjects
@@ -42,22 +42,33 @@ const RecentProjectsAppsTable = () => {
             return (
               <li
                 key={index}
-                className={classNames(`${gridLayout}`, {
+                className={classNames(gridLayout, {
                   "bg-pink/90 shadow-md": index % 2 !== 0,
                 })}
               >
                 <h3
-                  className={`text-paragraph normal-case text-left ${rowItemBorders} border-l-0 ${rowItemSpacing} ${
-                    index % 2 !== 0 && "text-white"
-                  }`}
+                  className={classNames(
+                    "text-paragraph normal-case text-left border-l-0",
+                    rowItemBorders,
+                    rowItemSpacing,
+                    { "text-white": index % 2 !== 0 },
+                  )}
                 >
                   {title}
                 </h3>
 
                 <div
-                  className={`grid grid-cols-[2fr_1fr] gap-4 ${rowItemBorders} ${rowItemSpacing}`}
+                  className={classNames(
+                    "grid grid-cols-[2fr_1fr] gap-4",
+                    rowItemBorders,
+                    rowItemSpacing,
+                  )}
                 >
-                  <p className={`text-left ${index % 2 !== 0 && "text-white"}`}>
+                  <p
+                    className={classNames("text-left", {
+                      "text-white": index % 2 !== 0,
+                    })}
+                  >
                     {client}
                   </p>
                   {image && (
@@ -71,23 +82,23 @@ const RecentProjectsAppsTable = () => {
                   )}
                 </div>
                 <p
-                  className={`${rowItemBorders} ${rowItemSpacing} ${
-                    index % 2 !== 0 && "text-white"
-                  }`}
+                  className={classNames(rowItemBorders, rowItemSpacing, {
+                    "text-white": index % 2 !== 0,
+                  })}
                 >
                   {description}
                 </p>
                 <p
-                  className={`${rowItemBorders} ${rowItemSpacing} ${
-                    index % 2 !== 0 && "text-white"
-                  }`}
+                  className={classNames(rowItemBorders, rowItemSpacing, {
+                    "text-white": index % 2 !== 0,
+                  })}
                 >
                   {year}
                 </p>
                 <p
-                  className={`text-left ${rowItemBorders} ${rowItemSpacing} ${
-                    index % 2 !== 0 && "text-white"
-                  }`}
+                  className={classNames("text-left", rowItemBorders, rowItemSpacing, {
+                    "text-white": index % 2 !== 0,
+                  })}
                 >
                   {status}
                 </p>

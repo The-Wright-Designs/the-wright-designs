@@ -4,7 +4,7 @@ import AboutComponent from "@/_components/home/about-component";
 import OurClientsComponent from "@/_components/home/our-clients-component";
 import ServicesComponent from "@/_components/home/services-component";
 import ContactComponent from "@/_components/home/contact-component";
-import RightForYouComponent from "@/_components/home/right-for-you-component";
+import FaqsComponent from "@/_components/home/faqs-component";
 
 export const metadata: Metadata = {
   title:
@@ -21,7 +21,7 @@ export default function Home() {
       <div id="services" className="-translate-y-32"></div>
       <ServicesComponent />
       <div id="faq" className="-translate-y-32"></div>
-      <RightForYouComponent />
+      <FaqsComponent />
       <div id="contact" className="-translate-y-32"></div>
       <ContactComponent />
     </>

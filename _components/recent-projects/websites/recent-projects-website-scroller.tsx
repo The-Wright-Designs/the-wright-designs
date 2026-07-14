@@ -6,7 +6,7 @@ import Image from "next/image";
 interface Props {
   src: string;
   alt: string;
-  loading?: string;
+  loading?: "eager" | "lazy";
   autoScroll?: boolean;
 }
 
@@ -86,7 +86,7 @@ const RecentProjectsWebsiteScroller = ({
         height={1000}
         alt={alt}
         quality={35}
-        loading={loading ? "eager" : "lazy"}
+        loading={loading}
         sizes="244px"
         className="h-auto"
       />
