@@ -1,5 +1,3 @@
-"use client";
-
 import Script from "next/script";
 
 const META_PIXEL_ID = "1993348474278678";

@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { useState, Suspense, lazy } from "react";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
-import classNames from "classnames";
 
 import ContactForm from "@/_components/contact-form";
 import RecaptchaProvider from "@/_components/recaptcha-provider";
@@ -12,17 +11,13 @@ import { showEmailAddress, showPhoneNumber } from "@/_actions/actions";
 
 import data from "@/_data/general-data.json";
 
-interface Props {
-  cssClasses?: string;
-}
-
 const LazyContactMap = lazy(() => import("./contact/contact-map"));
 
 const {
   contact: { address },
 } = data;
 
-const ContactInnerComponent = ({ cssClasses }: Props) => {
+const ContactInnerComponent = () => {
   const [showPhone, setShowPhone] = useState("Show phone number");
   const [showEmail, setShowEmail] = useState("Show email address");
   const [showSpinnerPhone, setShowSpinnerPhone] = useState(false);
@@ -64,7 +59,7 @@ const ContactInnerComponent = ({ cssClasses }: Props) => {
   };
 
   return (
-    <section className={classNames("tablet:mb-10", cssClasses)}>
+    <section className="tablet:mb-10">
       <h2 className="text-subheading mb-10 pb-1 border-b-4 border-pink tablet:col-span-2 desktopSmall:col-span-1">
         Contact
       </h2>
@@ -147,10 +142,10 @@ const ContactInnerComponent = ({ cssClasses }: Props) => {
   );
 };
 
-const ContactComponent = ({ cssClasses }: Props) => {
+const ContactComponent = () => {
   return (
     <RecaptchaProvider>
-      <ContactInnerComponent cssClasses={cssClasses} />
+      <ContactInnerComponent />
     </RecaptchaProvider>
   );
 };

@@ -13,11 +13,8 @@ interface Props {
   children: ReactNode;
   cssClasses?: string;
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
-  target?: string;
   buttonColor?: "blue" | "pink" | "beige";
-  outline?: boolean;
   form?: boolean;
-  disabled?: boolean;
 }
 
 const Button = ({
@@ -26,10 +23,7 @@ const Button = ({
   cssClasses,
   form,
   onClick,
-  target,
   buttonColor = "blue",
-  disabled,
-  outline,
 }: Props) => {
   const { pending } = useFormStatus();
 
@@ -39,18 +33,10 @@ const Button = ({
     "flex gap-3 items-center justify-center px-5 py-[14px] rounded-xl shadow-md uppercase tracking-[0.72px] font-medium text-[18px] ease-in-out duration-300 desktopSmall:hover:cursor-pointer",
     cssClasses,
     {
-      "bg-pink desktopSmall:hover:bg-pink/95 text-white":
-        buttonColor === "pink" && !outline,
-      "bg-blue desktopSmall:hover:bg-blue/95 text-white":
-        buttonColor === "blue" && !outline,
+      "bg-pink desktopSmall:hover:bg-pink/95 text-white": buttonColor === "pink",
+      "bg-blue desktopSmall:hover:bg-blue/95 text-white": buttonColor === "blue",
       "bg-beige desktopSmall:hover:bg-beige/95 border-grey/50 text-blue":
-        buttonColor === "beige" && !outline,
-      "bg-transparent border-2 border-blue text-blue desktopSmall:hover:bg-grey/10":
-        outline && buttonColor === "blue",
-      "bg-transparent border-2 border-pink text-pink":
-        outline && buttonColor === "pink",
-      "bg-transparent border-2 border-beige text-beige":
-        outline && buttonColor === "beige",
+        buttonColor === "beige",
     },
   );
 
@@ -60,7 +46,6 @@ const Button = ({
         type="submit"
         className={buttonClasses}
         onClick={onClick}
-        disabled={disabled}
         onMouseEnter={() => setArrowMove(true)}
         onMouseLeave={() => setArrowMove(false)}
       >
@@ -83,7 +68,7 @@ const Button = ({
     );
   } else {
     return (
-      <Link href={url!} target={target}>
+      <Link href={url!}>
         <button
           className={buttonClasses}
           onClick={onClick}
@@ -93,7 +78,6 @@ const Button = ({
         >
           {children}
           <ArrowSvg
-            outline={outline}
             buttonColor={buttonColor}
             cssClasses={classNames("ease-in-out duration-[400ms]", {
               "desktopSmall:translate-x-[2px] desktopSmall:scale-105":

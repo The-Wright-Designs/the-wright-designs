@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import classNames from "classnames";
 
 import data from "@/_data/general-data.json";
 import SocialIcons from "@/_lib/social-icons";
@@ -8,20 +7,11 @@ import { normalizeNavUrl } from "@/_utils/normalize-nav-url";
 
 const { navigation } = data;
 
-interface Props {
-  cssClasses?: string;
-}
-
-const Footer = ({ cssClasses }: Props) => {
+const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer
-      className={classNames(
-        "pt-12 pb-8 tablet:pb-5 tablet:bg-blue",
-        cssClasses,
-      )}
-    >
+    <footer className="pt-12 pb-8 tablet:pb-5 tablet:bg-blue">
       <div className="flex gap-10 flex-col px-5 items-center tablet:px-10 tablet:grid grid-cols-2 tablet:gap-5 desktop:max-w-[1280px] desktop:mx-auto">
         <div>
           <nav className="hidden tablet:block">

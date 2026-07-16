@@ -193,7 +193,6 @@
       {
         "title": "Luna Blue",
         "url": "https://www.lunarblue.co.za",
-        "locale": ["English", "Deutsch"],
         "image": {
           "mobile": "/assets/images/screenshots/luna-blue-mobile.png",
           "desktop": "/assets/images/screenshots/luna-blue-desktop.png",

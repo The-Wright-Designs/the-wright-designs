@@ -13,11 +13,7 @@ import "swiper/css/pagination";
 
 const { ourClients } = data;
 
-interface Props {
-  cssClasses?: string;
-}
-
-const OurClientsSlideshow = ({ cssClasses }: Props) => {
+const OurClientsSlideshow = () => {
   return (
     <Swiper
       slidesPerView={1}
@@ -49,7 +45,7 @@ const OurClientsSlideshow = ({ cssClasses }: Props) => {
         verticalClass: "swiper-pagination-v",
       }}
       modules={[Autoplay, Pagination]}
-      className={`desktopSmall:bg-beige desktopSmall:w-[110px] desktopSmall:h-full desktopSmall:our-clients-gradient ${cssClasses}`}
+      className="desktopSmall:bg-beige desktopSmall:w-[110px] desktopSmall:h-full desktopSmall:our-clients-gradient"
       style={
         {
           "--swiper-pagination-color": "#C86B7B",

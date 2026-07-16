@@ -44,7 +44,7 @@ const AboutComponent = () => {
               className="rounded-lg desktopSmall:h-full object-cover"
               sizes="(max-width: 800px) 90vw, 25vw"
             />
-            <figcaption className="text-white small-caps text-center text-paragraph pt-2">
+            <figcaption className="text-white text-center text-paragraph pt-2">
               Chad Wright
             </figcaption>
           </figure>
@@ -81,7 +81,7 @@ const AboutComponent = () => {
             className="rounded-lg w-full h-full object-cover"
             sizes="(max-width:1100px) 75vw, 10vw"
           />
-          <figcaption className="text-white small-caps text-center text-paragraph pt-2">
+          <figcaption className="text-white text-center text-paragraph pt-2">
             Chad Wright
           </figcaption>
         </figure>

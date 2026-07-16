@@ -139,10 +139,6 @@
 }
 
 @layer utilities {
-    .small-caps {
-        font-variant-caps: small-caps
-    }
-
     .our-clients-gradient {
         background: linear-gradient(to top, rgba(53, 60, 66, 0.10) -20%, rgba(234, 227, 205, 1) 10%, rgba(234, 227, 205, 1) 90%, rgba(53, 60, 66, 0.10) 120%);
     }

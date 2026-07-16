@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import classNames from "classnames";
 
 const FaqsComponent = () => {
@@ -10,13 +10,6 @@ const FaqsComponent = () => {
   const toggleAccordion = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
-
-  useEffect(() => {
-    if (openIndex !== null && contentRefs.current[openIndex]) {
-      contentRefs.current[openIndex]!.style.maxHeight =
-        contentRefs.current[openIndex]!.scrollHeight + "px";
-    }
-  }, [openIndex]);
 
   return (
     <section className="mb-15">
@@ -40,14 +33,14 @@ const FaqsComponent = () => {
         {accordionData.map((item, index) => (
           <li
             key={index}
+            onClick={() => toggleAccordion(index)}
             className={classNames(
-              "px-4 py-6 bg-blue text-white w-full rounded-md ease-in-out duration-200",
+              "px-4 py-6 bg-blue text-white w-full rounded-md ease-in-out duration-200 desktop:hover:cursor-pointer",
               openIndex !== index ? "desktopSmall:hover:bg-pink" : "bg-pink",
             )}
           >
             <button
               type="button"
-              onClick={() => toggleAccordion(index)}
               aria-expanded={openIndex === index}
               aria-controls={`faq-answer-${index}`}
               className={classNames(
@@ -78,10 +71,7 @@ const FaqsComponent = () => {
               ref={(el) => {
                 contentRefs.current[index] = el;
               }}
-              className={classNames(
-                "transition-max-height duration-200 ease-in-out overflow-hidden",
-                openIndex === index ? "max-h-screen" : "max-h-0",
-              )}
+              className="transition-max-height duration-200 ease-in-out overflow-hidden"
               style={{
                 maxHeight:
                   openIndex === index
