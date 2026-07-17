@@ -21,21 +21,18 @@ const MobileMenuToggle = ({ onClick, cssClasses }: Props) => {
   const currentRoute = usePathname();
 
   return (
-    <nav className={cssClasses}>
-      <ul className="flex flex-col gap-3 font-thin text-[20px]">
+    <nav className={classNames("pt-3", cssClasses)}>
+      <ul className="flex flex-col gap-3.5">
         {navigation.map((item, index) => (
           <li
             key={index}
-            className={classNames(
-              "text-beige flex gap-3 items-center cursor-pointer",
-              {
-                "border-b border-beige pb-5": index !== navigation.length - 1,
-              },
-            )}
+            className={classNames("text-beige flex gap-2 items-center", {
+              "border-b border-beige pb-3.5": index !== navigation.length - 1,
+            })}
           >
             <Link
               href={normalizeNavUrl(item.url)}
-              className="py-2 px-3 -my-2 -mx-3"
+              className="py-2 text-paragraph font-extralight px-3 -my-2 -mx-3"
               onClick={onClick}
             >
               {item.title}

@@ -5,11 +5,13 @@ import RecaptchaProvider from "@/_components/recaptcha-provider";
 
 const WebsitePerformanceCheckPage = () => {
   return (
-    <div className="mt-10 flex flex-col gap-10">
-      <AboutComponent />
-      <ListItemsComponent />
+    <div className="relative mt-10 grid gap-10 desktopSmall:grid-cols-[1fr_435px] desktopSmall:my-15">
+      <div className="flex flex-col gap-10">
+        <AboutComponent />
+        <ListItemsComponent />
+      </div>
       <RecaptchaProvider>
-        <WebsitePerformanceCheckContactForm cssClasses="-mx-7 px-7 py-10 tablet:-mx-10 tablet:px-10 desktopSmall:mx-0 desktopSmall:rounded-lg desktopSmall:p-6" />
+        <WebsitePerformanceCheckContactForm cssClasses="-mx-5 px-5 py-10 tablet:-mx-10 tablet:px-10 desktopSmall:mx-0 desktopSmall:rounded-lg desktopSmall:px-7 desktopSmall:py-10 desktopSmall:self-start desktopSmall:sticky desktopSmall:top-40" />
       </RecaptchaProvider>
     </div>
   );

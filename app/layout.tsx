@@ -74,7 +74,7 @@ export default function RootLayout({
         <FacebookPixel />
         <GoogleAds />
         <Header />
-        <div className="px-5 overflow-x-hidden tablet:px-10 desktop:px-0 desktop:max-w-[1280px] desktop:m-auto">
+        <div className="px-5 tablet:px-10 desktop:px-0 desktop:max-w-[1280px] desktop:m-auto">
           {children}
         </div>
         <Footer />

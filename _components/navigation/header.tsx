@@ -30,44 +30,36 @@ const Header = () => {
   return (
     <header
       className={classNames(
-        "sticky top-0 w-full bg-blue border-b-4 border-b-beige shadow-md z-20 ease-in-out duration-300 tablet:px-10 flex items-center",
+        "sticky h-[104px] w-full bg-blue border-b-4 border-b-beige shadow-md z-20 ease-in-out duration-300 tablet:px-10 flex items-center",
         {
-          "h-[92px]": isScrolled,
-          "h-[104px]": !isScrolled,
+          "-top-4": isScrolled,
+          "top-0": !isScrolled,
         },
       )}
     >
       <div className="w-full desktop:max-w-[1280px] desktop:m-auto tablet:flex tablet:justify-between tablet:items-end">
         <div>
-          <div className="flex justify-between items-center px-5 tablet:px-0">
+          <div
+            className={classNames(
+              "flex justify-between items-center px-5 tablet:px-0 ease-in-out duration-300",
+              {
+                "translate-y-2": isScrolled,
+              },
+            )}
+          >
             <Link href="/" className="desktopSmall:hover:opacity-95">
               <Image
                 src="/assets/the-wright-designs-logo.png"
                 alt="The Wright Designs logo"
                 className={classNames(
-                  "hidden h-auto w-[200px] origin-left translate-y-1 tablet:block rotate-1 ease-in-out duration-300",
+                  "h-auto w-[200px] translate-y-1 tablet:block rotate-1 desktopSmall:w-[240px] ease-in-out duration-300",
                   {
-                    "scale-[0.8]": isScrolled,
+                    "scale-[0.8] -translate-x-5": isScrolled,
                   },
                 )}
-                width={1050}
-                height={203}
-                sizes="(max-width: 425px) 0vw, (max-width: 800px) 20vw, 15vw"
-                priority
-              />
-              <Image
-                src="/assets/the-wright-designs-logo-square.jpg"
-                alt="The Wright Designs logo"
-                className={classNames(
-                  "h-12 w-12 ease-in-out duration-300 tablet:hidden",
-                  {
-                    "-translate-y-20": showMenuToggle,
-                    "scale-75": isScrolled && !showMenuToggle,
-                  },
-                )}
-                width={274}
-                height={60}
-                sizes="(max-width: 425px) 0vw, (max-width: 800px) 20vw, 15vw"
+                width={240}
+                height={75}
+                sizes="240px"
                 priority
               />
             </Link>
@@ -84,11 +76,13 @@ const Header = () => {
               {
                 "translate-x-0": showMenuToggle,
                 "translate-x-full": !showMenuToggle,
+                "top-25": !isScrolled,
+                "top-21": isScrolled,
               },
             )}
           />
         </div>
-        <DesktopMenu cssClasses={isScrolled ? "translate-y-[3px]" : ""} />
+        <DesktopMenu cssClasses={isScrolled ? "translate-y-2" : ""} />
       </div>
     </header>
   );

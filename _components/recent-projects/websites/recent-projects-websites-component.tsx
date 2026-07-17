@@ -108,7 +108,7 @@ const RecentProjectsWebsitesComponent = () => {
                 alt={`${title} mobile preview`}
                 width={280}
                 height={900}
-                className="drop-shadow-md h-auto"
+                className="shadow-md h-auto"
                 loading={index === 0 ? "eager" : "lazy"}
                 quality={60}
                 sizes="(max-width:425px) 75vw, 50vw"
@@ -163,7 +163,7 @@ const RecentProjectsWebsitesComponent = () => {
                 width={1100}
                 height={580}
                 className={classNames(
-                  "object-contain drop-shadow-md max-w-[725px] desktop:max-w-[1000px] transform duration-[650ms] ease-in-out",
+                  "object-contain shadow-md max-w-[725px] desktop:max-w-[1000px] transform duration-[650ms] ease-in-out",
                   {
                     "scale-[1.02]": isHovered,
                     "order-2": index % 2,
@@ -179,7 +179,7 @@ const RecentProjectsWebsitesComponent = () => {
                 width={300}
                 height={600}
                 className={classNames(
-                  "z-10 my-auto object-contain drop-shadow-md w-[190px] desktop:w-[260px] transform duration-[550ms] ease-in-out",
+                  "z-10 my-auto object-contain shadow-md w-[190px] desktop:w-[260px] transform duration-[550ms] ease-in-out",
                   {
                     "translate-x-4": index % 2,
                     "-translate-x-4": !(index % 2),

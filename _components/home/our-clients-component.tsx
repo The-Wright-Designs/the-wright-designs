@@ -8,7 +8,7 @@ interface Props {
 
 const OurClientsComponent = ({ cssClasses }: Props) => {
   return (
-    <article className={classNames("my-15", cssClasses)}>
+    <article className={classNames("my-15 overflow-x-hidden", cssClasses)}>
       <h2 className="text-subheading pb-1 border-b-4 border-blue mb-10">
         Our Clients
       </h2>

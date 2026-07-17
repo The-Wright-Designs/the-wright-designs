@@ -1,4 +1,7 @@
 import Image from "next/image";
+
+import classNames from "classnames";
+
 import Button from "../button";
 import HeroSlideshow from "@/_lib/hero-slideshow";
 
@@ -9,7 +12,10 @@ interface Props {
 const HeroComponent = ({ cssClasses }: Props) => {
   return (
     <main
-      className={`pt-[200px] px-5 -mx-5 phone:pt-[250px] bg-gradient-to-t from-beige from-75% via-beige/85 via-85% to-90% to-transparent tablet:px-10 tablet:pt-10 tablet:-mx-10 tablet:bg-[url('/assets/images/hero-background-desktop.webp')] bg-cover bg-center desktop:mx-0 relative ${cssClasses}`}
+      className={classNames(
+        "pt-[200px] px-5 -mx-5 phone:pt-[250px] bg-gradient-to-t from-beige from-75% via-beige/85 via-85% to-90% to-transparent tablet:px-10 tablet:pt-10 tablet:-mx-10 tablet:bg-[url('/assets/images/hero-background-desktop.webp')] bg-cover bg-center desktop:mx-0 relative",
+        cssClasses,
+      )}
     >
       <div className="flex flex-col pt-10 -mt-10 px-5 -mx-5 tablet:px-10 tablet:-mx-10 gap-10 desktopSmall:grid grid-cols-2 tablet:bg-beige/90 desktopSmall:bg-transparent desktopSmall:bg-gradient-to-r desktopSmall:from-40% desktopSmall:from-beige/90 desktopSmall:to-70% desktopSmall:to-beige/25 desktopSmall:py-10 desktopSmall:items-center">
         <div className="desktopSmall:w-[476px] desktopSmall:grid gap-5">

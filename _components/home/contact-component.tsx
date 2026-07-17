@@ -136,7 +136,7 @@ const ContactInnerComponent = () => {
         >
           <LazyContactMap cssClasses="h-[400px] w-full desktopSmall:row-span-2 desktopSmall:h-full" />
         </Suspense>
-        <GeneralContactForm cssClasses="-mx-7 px-7 py-10 tablet:-mx-10 tablet:px-10 desktopSmall:mx-0 desktopSmall:rounded-lg desktopSmall:p-6" />
+        <GeneralContactForm cssClasses="-mx-5 px-5 py-10 tablet:-mx-10 tablet:px-10 desktopSmall:mx-0 desktopSmall:rounded-lg desktopSmall:p-6" />
       </div>
     </section>
   );

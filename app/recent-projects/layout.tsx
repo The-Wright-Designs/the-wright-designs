@@ -49,7 +49,7 @@ export default function RecentProjectsLayout({
       {children}
       <div id="contact" className="-translate-y-32"></div>
       <RecaptchaProvider>
-        <ContactForm cssClasses="-mx-7 px-7 py-10 tablet:-mx-10 tablet:px-10 desktopSmall:mx-0 desktopSmall:rounded-lg desktopSmall:p-6" />
+        <ContactForm cssClasses="-mx-5 px-5 py-10 tablet:-mx-10 tablet:px-10 desktopSmall:mx-0 desktopSmall:rounded-lg desktopSmall:p-6" />
       </RecaptchaProvider>
     </main>
   );

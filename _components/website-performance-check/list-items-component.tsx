@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const features = [
   {
     title: "Full Site Assessment",
@@ -64,8 +66,8 @@ const features = [
 const ListItemsComponent = () => {
   return (
     <section className="flex flex-col gap-5">
-      <div className="flex flex-col gap-2">
-        <p className="text-grey text-[14px] font-bold">What you get</p>
+      <div className="flex flex-col gap-1">
+        <p className="text-grey text-[14px] font-semibold">What you get</p>
         <h2 className="text-heading text-[20px]">
           A Clear Picture of Where You Stand
         </h2>
@@ -91,6 +93,26 @@ const ListItemsComponent = () => {
           </li>
         ))}
       </ul>
+      <div className="mt-5 desktopSmall:grid grid-cols-[1.25fr_1fr] gap-10 desktopSmall:h-[250px]">
+        <div className="hidden relative aspect-square rounded-lg overflow-hidden shadow-md min-[600px]:aspect-video desktopSmall:block desktopSmall:aspect-auto">
+          <Image
+            src="/assets/images/website-performance-check/3r4twgrerw3r.png"
+            alt="A poor website performance report displayed on a laptop"
+            fill
+            className="object-cover"
+            sizes="300px"
+          />
+        </div>
+        <div className="relative aspect-square rounded-lg overflow-hidden shadow-md min-[600px]:aspect-video desktopSmall:aspect-auto">
+          <Image
+            src="/assets/images/website-performance-check/rwerg089-0j4otgwrb.png"
+            alt="A web designer and client going through a website performance report"
+            fill
+            className="object-cover"
+            sizes="(min-width: 1100px) 100vw, 450px"
+          />
+        </div>
+      </div>
     </section>
   );
 };

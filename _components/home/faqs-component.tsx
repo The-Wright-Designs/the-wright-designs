@@ -35,7 +35,7 @@ const FaqsComponent = () => {
             key={index}
             onClick={() => toggleAccordion(index)}
             className={classNames(
-              "px-4 py-6 bg-blue text-white w-full rounded-md ease-in-out duration-200 desktop:hover:cursor-pointer",
+              "px-4 py-6 bg-blue text-white w-full rounded-md ease-in-out duration-200 desktopSmall:hover:cursor-pointer",
               openIndex !== index ? "desktopSmall:hover:bg-pink" : "bg-pink",
             )}
           >
@@ -71,7 +71,7 @@ const FaqsComponent = () => {
               ref={(el) => {
                 contentRefs.current[index] = el;
               }}
-              className="transition-max-height duration-200 ease-in-out overflow-hidden"
+              className="transition-max-height duration-200 ease-in-out overflow-hidden desktopSmall:hover:cursor-pointer"
               style={{
                 maxHeight:
                   openIndex === index

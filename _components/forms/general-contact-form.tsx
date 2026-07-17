@@ -73,10 +73,10 @@ const GeneralContactForm = ({ cssClasses }: Props) => {
             }
             setFormSubmitted(true);
           }}
-          className="flex flex-col gap-8"
+          className="flex flex-col gap-6"
         >
           <input type="hidden" name="_honey" className="hidden" />
-          <div className="flex flex-col gap-8">
+          <div className="flex flex-col gap-6">
             <div className="flex flex-col gap-3">
               <label
                 htmlFor="email"
@@ -116,7 +116,7 @@ const GeneralContactForm = ({ cssClasses }: Props) => {
               onClick={() => {
                 setShowMessage(true);
               }}
-              cssClasses="justify-center tablet:w-[135px] tablet:justify-between"
+              cssClasses="mt-2 justify-center tablet:w-[135px] tablet:justify-between"
               form
               buttonColor="pink"
             >
@@ -143,7 +143,7 @@ const GeneralContactForm = ({ cssClasses }: Props) => {
               </div>
 
               <Button
-                cssClasses="justify-center tablet:w-[150px] tablet:justify-between"
+                cssClasses="mt-2 justify-center tablet:w-[150px] tablet:justify-between"
                 form
                 buttonColor="pink"
               >

@@ -74,7 +74,7 @@ const WebsitePerformanceCheckContactForm = ({ cssClasses }: Props) => {
             }
             setFormSubmitted(true);
           }}
-          className="flex flex-col gap-8"
+          className="flex flex-col gap-6"
         >
           <input type="hidden" name="_honey" className="hidden" />
           <div className="flex flex-col gap-3">
@@ -133,14 +133,14 @@ const WebsitePerformanceCheckContactForm = ({ cssClasses }: Props) => {
             </label>
             <textarea
               id="message"
-              rows={5}
+              rows={3}
               name="message"
               placeholder="Type your message here..."
             />
           </div>
 
           <Button
-            cssClasses="justify-center tablet:w-[150px] tablet:justify-between"
+            cssClasses="justify-center mt-2 tablet:w-[150px] tablet:justify-between"
             form
             buttonColor="pink"
           >

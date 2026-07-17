@@ -13,7 +13,7 @@ const SocialIcons = ({ cssClasses, beige }: Props) => {
         <Link
           href="https://www.facebook.com/thewrightdesignsSA"
           target="_blank"
-          className="desktopSmall:hover:opacity-90"
+          className="desktopSmall:hover:opacity-90 ease-in-out duration-300"
           aria-label="View our Facebook page"
         >
           <svg

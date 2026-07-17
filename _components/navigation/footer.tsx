@@ -12,7 +12,7 @@ const Footer = () => {
 
   return (
     <footer className="pt-12 pb-8 tablet:pb-5 tablet:bg-blue">
-      <div className="flex gap-10 flex-col px-5 items-center tablet:px-10 tablet:grid grid-cols-2 tablet:gap-5 desktop:max-w-[1280px] desktop:mx-auto">
+      <div className="max-w-[1280px] mx-auto flex gap-7 flex-col px-5 items-center tablet:px-10 tablet:grid grid-cols-2 tablet:gap-5 desktopSmall:px-0">
         <div>
           <nav className="hidden tablet:block">
             <ul className="flex flex-col font-light text-[14px] gap-1">

@@ -1,3 +1,5 @@
+import classNames from "classnames";
+
 interface Props {
   buttonColor?: string;
   mobileMenu?: boolean;
@@ -12,7 +14,7 @@ const ArrowSvg = ({ buttonColor, mobileMenu, cssClasses }: Props) => {
       viewBox="0 0 20 20"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className={`${cssClasses} ${mobileMenu && "rotate-180"}`}
+      className={classNames(cssClasses, { "rotate-180 scale-80": mobileMenu })}
     >
       <g clipPath="url(#clip0_308_327)">
         <path
@@ -21,8 +23,8 @@ const ArrowSvg = ({ buttonColor, mobileMenu, cssClasses }: Props) => {
             buttonColor === "blue" || buttonColor === "pink"
               ? "#FFFFFF"
               : mobileMenu
-              ? "#C86B7B"
-              : "#353C42"
+                ? "#C86B7B"
+                : "#353C42"
           }
         />
       </g>
