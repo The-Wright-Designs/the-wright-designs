@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState, Suspense, lazy } from "react";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
-import ContactForm from "@/_components/contact-form";
+import GeneralContactForm from "@/_components/forms/general-contact-form";
 import RecaptchaProvider from "@/_components/recaptcha-provider";
 import SocialIcons from "@/_lib/social-icons";
 import { showEmailAddress, showPhoneNumber } from "@/_actions/actions";
@@ -136,7 +136,7 @@ const ContactInnerComponent = () => {
         >
           <LazyContactMap cssClasses="h-[400px] w-full desktopSmall:row-span-2 desktopSmall:h-full" />
         </Suspense>
-        <ContactForm cssClasses="-mx-7 px-7 py-10 tablet:-mx-10 tablet:px-10 desktopSmall:mx-0 desktopSmall:rounded-lg desktopSmall:p-6" />
+        <GeneralContactForm cssClasses="-mx-7 px-7 py-10 tablet:-mx-10 tablet:px-10 desktopSmall:mx-0 desktopSmall:rounded-lg desktopSmall:p-6" />
       </div>
     </section>
   );

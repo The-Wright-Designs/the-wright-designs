@@ -2,7 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import classNames from "classnames";
-import ContactForm from "@/_components/contact-form";
+import ContactForm from "@/_components/forms/general-contact-form";
 import RecaptchaProvider from "@/_components/recaptcha-provider";
 import Link from "next/link";
 
@@ -13,7 +13,7 @@ export default function RecentProjectsLayout({
 }>) {
   const currentRoute = usePathname();
   return (
-    <main className="tablet:mb-10 mt-[160px] tablet:mt-[150px]">
+    <main className="tablet:mb-10">
       <h1 className="text-heading text-center mt-10 mb-15">Recent Projects</h1>
       <div className="grid grid-cols-2 mb-15">
         <Link

@@ -30,7 +30,7 @@ const Header = () => {
   return (
     <header
       className={classNames(
-        "fixed w-full bg-blue border-b-4 border-b-beige shadow-md z-20 ease-in-out duration-300 tablet:px-10 flex items-center",
+        "sticky top-0 w-full bg-blue border-b-4 border-b-beige shadow-md z-20 ease-in-out duration-300 tablet:px-10 flex items-center",
         {
           "h-[92px]": isScrolled,
           "h-[104px]": !isScrolled,

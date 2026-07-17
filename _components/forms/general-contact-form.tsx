@@ -11,7 +11,7 @@ interface Props {
   cssClasses?: string;
 }
 
-const ContactForm = ({ cssClasses }: Props) => {
+const GeneralContactForm = ({ cssClasses }: Props) => {
   const [showMessage, setShowMessage] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
@@ -91,7 +91,6 @@ const ContactForm = ({ cssClasses }: Props) => {
                 required
                 autoComplete="email"
                 placeholder="Type your email address here..."
-                className="bg-grey placeholder-blue px-2 py-1 font-light focus:bg-pink focus:placeholder-beige focus:text-beige"
               />
             </div>
             <div className="flex flex-col gap-3">
@@ -109,7 +108,6 @@ const ContactForm = ({ cssClasses }: Props) => {
                 required
                 minLength={3}
                 placeholder="Type your full name here..."
-                className="bg-grey placeholder-blue px-2 py-1 font-light focus:bg-pink focus:placeholder-beige focus:text-beige"
               />
             </div>
           </div>
@@ -141,7 +139,6 @@ const ContactForm = ({ cssClasses }: Props) => {
                   name="message"
                   placeholder="Type your message
                   here..."
-                  className="bg-grey placeholder-blue px-2 py-1 font-light focus:bg-pink focus:placeholder-beige focus:text-beige"
                 />
               </div>
 
@@ -160,4 +157,4 @@ const ContactForm = ({ cssClasses }: Props) => {
   );
 };
 
-export default ContactForm;
+export default GeneralContactForm;

@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      <HeroComponent cssClasses="mt-[104px]" />
+      <HeroComponent />
       <OurClientsComponent cssClasses="desktopSmall:hidden" />
       <div id="about" className="scroll-mt-20" />
       <AboutComponent />
