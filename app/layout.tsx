@@ -44,6 +44,9 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
   },
+  other: {
+    "facebook-domain-verification": "wvgja4fwnttx5y45j6lsvtj6kr5uxg",
+  },
 };
 
 const structuredData = {
