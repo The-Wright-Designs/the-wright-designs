@@ -15,6 +15,7 @@ interface Props {
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
   buttonColor?: "blue" | "pink" | "beige";
   form?: boolean;
+  newTab?: boolean;
 }
 
 const Button = ({
@@ -24,6 +25,7 @@ const Button = ({
   form,
   onClick,
   buttonColor = "blue",
+  newTab,
 }: Props) => {
   const { pending } = useFormStatus();
 
@@ -68,7 +70,11 @@ const Button = ({
     );
   } else {
     return (
-      <Link href={url!}>
+      <Link
+        href={url!}
+        target={newTab ? "_blank" : undefined}
+        rel={newTab ? "noopener noreferrer" : undefined}
+      >
         <button
           className={buttonClasses}
           onClick={onClick}

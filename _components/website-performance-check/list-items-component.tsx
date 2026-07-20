@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+import Button from "@/_components/button";
+
 const features = [
   {
     title: "Full Site Assessment",
@@ -93,6 +95,14 @@ const ListItemsComponent = () => {
           </li>
         ))}
       </ul>
+      <Button
+        url="/assets/website-performace-check/example-website-performace-report.pdf"
+        buttonColor="blue"
+        cssClasses="mt-5 self-start"
+        newTab
+      >
+        View Example Report
+      </Button>
       <div className="mt-5 desktopSmall:grid grid-cols-[1.25fr_1fr] gap-10 desktopSmall:h-[250px]">
         <div className="hidden relative aspect-square rounded-lg overflow-hidden shadow-md min-[600px]:aspect-video desktopSmall:block desktopSmall:aspect-auto">
           <Image
