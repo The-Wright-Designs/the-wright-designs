@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Link from "next/link";
+import GoogleRatingComponent from "../reviews/google-rating-component";
 
 const AboutComponent = () => {
   return (
@@ -27,11 +29,29 @@ const AboutComponent = () => {
         </p>
 
         <p>
-          Based in Plettenberg Bay, we&apos;re happy to meet in person over
-          coffee for 30 minutes to walk you through the results if you&apos;d
-          prefer a face-to-face chat.
+          <span className="font-bold">
+            We&apos;re a Plett based web design and development studio
+          </span>{" "}
+          that builds clean, fast and secure websites that are made to convert —
+          so we know exactly what to look for when we assess yours.
+        </p>
+        <p>
+          We&apos;re also happy to meet in person over coffee for 30 minutes to
+          walk you through the results if you&apos;d prefer a face-to-face chat.
+        </p>
+        <p>
+          <span className="font-bold">Need more convincing?</span> Take a look
+          at our{" "}
+          <Link
+            href="/recent-projects/websites"
+            className="text-linkBlue underline underline-offset-[3px] desktop:hover:cursor-pointer desktopSmall:hover:text-pink ease-in-out duration-300"
+          >
+            recent projects
+          </Link>{" "}
+          to see the kind of work we do, or read through our reviews below.
         </p>
       </div>
+      <GoogleRatingComponent cssClasses="desktopSmall:hidden" />
       <div className="relative aspect-square rounded-lg overflow-hidden shadow-md min-[600px]:aspect-video desktopSmall:hidden">
         <Image
           src="/assets/images/website-performance-check/3r4twgrerw3r.png"
@@ -41,6 +61,7 @@ const AboutComponent = () => {
           sizes="100vw"
         />
       </div>
+      <GoogleRatingComponent cssClasses="hidden desktopSmall:block" />
     </main>
   );
 };

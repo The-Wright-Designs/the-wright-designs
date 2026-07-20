@@ -98,7 +98,7 @@ const ListItemsComponent = () => {
       <Button
         url="/assets/website-performace-check/example-website-performace-report.pdf"
         buttonColor="blue"
-        cssClasses="mt-5 self-start"
+        cssClasses="mt-5 w-full self-start tablet:w-auto"
         newTab
       >
         View Example Report

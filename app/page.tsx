@@ -5,6 +5,7 @@ import OurClientsComponent from "@/_components/home/our-clients-component";
 import ServicesComponent from "@/_components/home/services-component";
 import ContactComponent from "@/_components/home/contact-component";
 import FaqsComponent from "@/_components/home/faqs-component";
+import GoogleRatingComponent from "@/_components/reviews/google-rating-component";
 
 export const metadata: Metadata = {
   title:

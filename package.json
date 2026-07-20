@@ -11,6 +11,7 @@
   "dependencies": {
     "@react-google-maps/api": "^2.20.7",
     "classnames": "^2.5.1",
+    "lucide-react": "^1.25.0",
     "next": "^16.1.6",
     "nodemailer": "^7.0.11",
     "react": "19.2.3",
@@ -21,8 +22,8 @@
     "tailwind-scrollbar-hide": "^4.0.0"
   },
   "devDependencies": {
-    "@types/node": "25.0.1",
     "@tailwindcss/postcss": "^4.1.16",
+    "@types/node": "25.0.1",
     "@types/nodemailer": "^7.0.4",
     "@types/react": "19.2.7",
     "@types/react-dom": "19.2.3",

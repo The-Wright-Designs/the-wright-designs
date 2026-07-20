@@ -4,6 +4,7 @@ import classNames from "classnames";
 
 import Button from "../button";
 import HeroSlideshow from "@/_lib/hero-slideshow";
+import GoogleRatingComponent from "../reviews/google-rating-component";
 
 interface Props {
   cssClasses?: string;
@@ -64,10 +65,8 @@ const HeroComponent = ({ cssClasses }: Props) => {
               <li className="text-white tracking-[0.15px]">
                 Ongoing maintenance
               </li>
-              <li className="mt-2">
-                <Button url="#contact" buttonColor="beige" cssClasses="w-full">
-                  Get in Touch
-                </Button>
+              <li className="mt-2 flex bg-beige py-4 px-5 rounded-lg">
+                <GoogleRatingComponent cssClasses="desktopSmall:flex-row desktopSmall:items-center desktopSmall:gap-4" />
               </li>
             </ul>
           </div>
@@ -95,10 +94,8 @@ const HeroComponent = ({ cssClasses }: Props) => {
               Ongoing maintenance
             </li>
 
-            <li className="mt-2">
-              <Button url="#contact" buttonColor="beige" cssClasses="w-full">
-                Get in Touch
-              </Button>
+            <li className="mt-2 place-self-start">
+              <GoogleRatingComponent cssClasses="bg-beige py-4 px-5 rounded-lg flex-row flex-wrap items-center gap-x-4" />
             </li>
           </ul>
         </div>

@@ -2,12 +2,13 @@ import Image from "next/image";
 
 import Button from "../button";
 import OurClientsSlideshow from "@/_lib/our-clients-slideshow";
+import GoogleRatingComponent from "../reviews/google-rating-component";
 
 const AboutComponent = () => {
   return (
     <section className="bg-blue px-5 -mx-5 py-10 grid gap-10 tablet:px-10 tablet:-mx-10 relative overflow-hidden mb-15  desktopSmall:border-y-8 border-blue desktop:mx-0">
       <div className="grid gap-y-5 gap-x-10 tablet:grid-cols-2 desktopSmall:gap-x-0 desktopSmall:grid-cols-[1fr_280px] desktopSmall:place-content-start">
-        <h2 className="text-white text-subheading pb-1 border-b-4 border-white tablet:col-span-2 desktopSmall:col-span-1">
+        <h2 className="flex-1 text-white text-subheading pb-1 border-b-4 border-white tablet:col-span-2 desktopSmall:col-span-1">
           About
         </h2>
         <div className="flex flex-col gap-5 desktopSmall:grid grid-cols-[1fr_225px] desktop:grid-cols-[1fr_188px] desktopSmall:gap-x-10 desktopSmall:col-start-1 place-items-start">
