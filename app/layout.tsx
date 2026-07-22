@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
   },
   other: {
-    "facebook-domain-verification": "wvgja4fwnttx5y45j6lsvtj6kr5uxg",
+    "facebook-domain-verification": "8xiotnmes1h1i4qopqsdswcr84ijhv",
   },
 };
 
