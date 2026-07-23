@@ -7,7 +7,7 @@ import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import GeneralContactForm from "@/_components/forms/general-contact-form";
 import RecaptchaProvider from "@/_components/recaptcha-provider";
 import SocialIcons from "@/_lib/social-icons";
-import { showEmailAddress, showPhoneNumber } from "@/_actions/actions";
+import { showEmailAddress, showPhoneNumber } from "@/_actions/contact-actions";
 
 import data from "@/_data/general-data.json";
 

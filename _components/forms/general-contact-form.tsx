@@ -5,7 +5,7 @@ import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import classNames from "classnames";
 
 import Button from "@/_components/button";
-import { sendEmail } from "@/_actions/actions";
+import { sendEmail } from "@/_actions/send-general-email-actions";
 
 interface Props {
   cssClasses?: string;

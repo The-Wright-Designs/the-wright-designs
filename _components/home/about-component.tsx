@@ -1,8 +1,7 @@
 import Image from "next/image";
 
-import Button from "../button";
+import Button from "@/_components/button";
 import OurClientsSlideshow from "@/_lib/our-clients-slideshow";
-import GoogleRatingComponent from "../reviews/google-rating-component";
 
 const AboutComponent = () => {
   return (

@@ -5,13 +5,13 @@ import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import classNames from "classnames";
 
 import Button from "@/_components/button";
-import { sendPerformanceCheckEmail } from "@/_actions/actions";
+import { sendDataCaptureEmail } from "@/_actions/data-capture-actions";
 
 interface Props {
   cssClasses?: string;
 }
 
-const WebsitePerformanceCheckContactForm = ({ cssClasses }: Props) => {
+const DataCaptureContactForm = ({ cssClasses }: Props) => {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
   const { executeRecaptcha } = useGoogleReCaptcha();
@@ -31,14 +31,14 @@ const WebsitePerformanceCheckContactForm = ({ cssClasses }: Props) => {
         <>
           <p className="text-beige mb-6">
             Fill in your details below. We&apos;ll get back to you within 24
-            hours with a free assessment of your current site and a brief
-            bird&apos;s-eye-view plan of action to get your online presence back
-            on track.
+            hours to talk through your current setup and show you what a simple,
+            digital loyalty or data capture system could look like for your
+            business.
           </p>
           {submitError && (
             <p className="text-pink mb-6 text-[18px] font-bold">
               {submitError === "invalid"
-                ? "Please check that your email address, phone number and website URL are filled in correctly and try again."
+                ? "Please check that your name, email address and message are filled in correctly and try again."
                 : "Sorry, your message couldn't be sent — reCAPTCHA verification failed. Please try again."}
             </p>
           )}
@@ -59,7 +59,7 @@ const WebsitePerformanceCheckContactForm = ({ cssClasses }: Props) => {
             setSubmitError(null);
             const recaptchaToken = await executeRecaptcha("contact_form");
             formData.append("recaptchaToken", recaptchaToken);
-            const result = await sendPerformanceCheckEmail(formData);
+            const result = await sendDataCaptureEmail(formData);
             if (!result?.success) {
               setSubmitError(result?.error ?? "send");
               return;
@@ -78,6 +78,20 @@ const WebsitePerformanceCheckContactForm = ({ cssClasses }: Props) => {
         >
           <input type="hidden" name="_honey" className="hidden" />
           <div className="flex flex-col gap-3">
+            <label htmlFor="name" className="text-paragraph font-bold text-beige">
+              Name:
+            </label>
+            <input
+              type="text"
+              id="name"
+              name="fullName"
+              required
+              minLength={3}
+              autoComplete="name"
+              placeholder="Type your full name here..."
+            />
+          </div>
+          <div className="flex flex-col gap-3">
             <label
               htmlFor="email"
               className="text-paragraph font-bold text-beige"
@@ -95,33 +109,17 @@ const WebsitePerformanceCheckContactForm = ({ cssClasses }: Props) => {
           </div>
           <div className="flex flex-col gap-3">
             <label
-              htmlFor="phone"
+              htmlFor="businessName"
               className="text-paragraph font-bold text-beige"
             >
-              Phone:
-            </label>
-            <input
-              type="tel"
-              id="phone"
-              name="phone"
-              required
-              autoComplete="tel"
-              placeholder="Type your phone number here..."
-            />
-          </div>
-          <div className="flex flex-col gap-3">
-            <label
-              htmlFor="websiteUrl"
-              className="text-paragraph font-bold text-beige"
-            >
-              Your Current Website URL:
+              Business Name (optional):
             </label>
             <input
               type="text"
-              id="websiteUrl"
-              name="websiteUrl"
-              required
-              placeholder="e.g. www.yourbusiness.co.za"
+              id="businessName"
+              name="businessName"
+              autoComplete="organization"
+              placeholder="Type your business name here..."
             />
           </div>
           <div className="flex flex-col gap-3">
@@ -129,12 +127,13 @@ const WebsitePerformanceCheckContactForm = ({ cssClasses }: Props) => {
               htmlFor="message"
               className="text-paragraph font-bold text-beige"
             >
-              Message (optional):
+              Message:
             </label>
             <textarea
               id="message"
-              rows={3}
               name="message"
+              required
+              rows={5}
               placeholder="Type your message here..."
             />
           </div>
@@ -152,4 +151,4 @@ const WebsitePerformanceCheckContactForm = ({ cssClasses }: Props) => {
   );
 };
 
-export default WebsitePerformanceCheckContactForm;
+export default DataCaptureContactForm;

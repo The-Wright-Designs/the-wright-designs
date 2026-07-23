@@ -4,9 +4,9 @@ import Button from "@/_components/button";
 
 const features = [
   {
-    title: "Full Site Assessment",
+    title: "Built Around the Way You Work",
     description:
-      "We check your site's speed, mobile experience, security, and whether your booking or contact forms actually work the way they should.",
+      "No off-the-shelf template. Whatever we build is tailored to your business and the way you and your team already work — not the other way around.",
     icon: (
       <svg
         viewBox="0 0 32 32"
@@ -15,18 +15,19 @@ const features = [
         className="size-5 desktopSmall:size-8"
       >
         <path
-          d="M28.0002 28.0002L22.2135 22.2135M25.3333 14.6667C25.3333 20.5577 20.5577 25.3333 14.6667 25.3333C8.77563 25.3333 4 20.5577 4 14.6667C4 8.77563 8.77563 4 14.6667 4C20.5577 4 25.3333 8.77563 25.3333 14.6667Z"
+          d="M23.4 5.6L19.7 9.3L19.7 12.3L22.7 12.3L26.4 8.6C27.1 11.1 26.4 13.9 24.4 15.9C22.2 18.1 19 18.7 16.3 17.7L8.4 25.6C7.2 26.8 5.3 26.8 4.1 25.6C2.9 24.4 2.9 22.5 4.1 21.3L12 13.4C11 10.7 11.6 7.5 13.8 5.3C15.8 3.3 18.6 2.6 21.1 3.3L23.4 5.6Z"
           className="stroke-white desktopSmall:stroke-pink"
           strokeWidth="2"
           strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </svg>
     ),
   },
   {
-    title: "Plain-English Report & Next Steps",
+    title: "Digital Loyalty, Made Simple",
     description:
-      "No tech-speak. You'll get a straightforward summary of what's working, what's not, and a clear plan of action if you'd like our help fixing it.",
+      "We'll show you how to replace paper stamp cards or spreadsheets with a simple digital loyalty system your customers and staff will actually use.",
     icon: (
       <svg
         viewBox="0 0 32 32"
@@ -35,7 +36,28 @@ const features = [
         className="size-5 desktopSmall:size-8"
       >
         <path
-          d="M18.6664 2.6656H8.0008C7.29363 2.6656 6.61542 2.94658 6.11537 3.44671C5.61532 3.94685 5.3344 4.62518 5.3344 5.33248V26.6675C5.3344 27.3748 5.61532 28.0531 6.11537 28.5533C6.61542 29.0534 7.29363 29.3344 8.0008 29.3344H23.9992C24.7064 29.3344 25.3846 29.0534 25.8846 28.5533C26.3847 28.0531 26.6656 27.3748 26.6656 26.6675V10.6662M18.6664 2.6656C19.0884 2.66492 19.5064 2.74775 19.8963 2.90932C20.2862 3.07088 20.6403 3.308 20.9382 3.60701L25.7217 8.39139C26.0214 8.68943 26.2592 9.04391 26.4212 9.43436C26.5832 9.82481 26.6663 10.2435 26.6656 10.6662M18.6664 2.6656V9.3328C18.6664 9.68645 18.8069 10.0256 19.0569 10.2757C19.3069 10.5258 19.646 10.6662 19.9996 10.6662L26.6656 10.6662M13.3336 11.9997H10.6672M21.3328 17.3334H10.6672M21.3328 22.6672H10.6672"
+          d="M16 4L19.708 11.512L28 12.719L22 18.566L23.416 26.824L16 22.925L8.584 26.824L10 18.566L4 12.719L12.292 11.512L16 4Z"
+          className="stroke-white desktopSmall:stroke-pink"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    ),
+  },
+  {
+    title: "Works Alongside Your Existing POS",
+    description:
+      "No need to rip out what you've already got. We build solutions that sit alongside your current POS or till system, not against it.",
+    icon: (
+      <svg
+        viewBox="0 0 32 32"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        className="size-5 desktopSmall:size-8"
+      >
+        <path
+          d="M4 12H28M8 4H24C25.1046 4 26 4.89543 26 6V26C26 27.1046 25.1046 28 24 28H8C6.89543 28 6 27.1046 6 26V6C6 4.89543 6.89543 4 8 4ZM11 18H11.01M16 18H16.01M21 18H21.01M11 23H11.01M16 23H16.01M21 23H21.01"
           className="stroke-white desktopSmall:stroke-pink"
           strokeWidth="2"
           strokeLinecap="round"
@@ -44,9 +66,9 @@ const features = [
     ),
   },
   {
-    title: "Are You Losing Customers?",
+    title: "Know Your Customers Better",
     description:
-      "We'll check whether your contact forms, WhatsApp links, and buttons are actually working — and whether visitors can easily get in touch or make a booking.",
+      "See who's buying, how often, and what they love — so you can bring customers back with less guesswork and less admin.",
     icon: (
       <svg
         viewBox="0 0 32 32"
@@ -71,7 +93,7 @@ const ListItemsComponent = () => {
       <div className="flex flex-col gap-1">
         <p className="text-grey text-[14px] font-semibold">What you get</p>
         <h2 className="text-heading text-[20px]">
-          A Clear Picture of Where You Stand
+          A Simple Way to Know Your Customers
         </h2>
       </div>
 
@@ -95,19 +117,11 @@ const ListItemsComponent = () => {
           </li>
         ))}
       </ul>
-      <Button
-        url="/assets/website-performace-check/example-website-performace-report.pdf"
-        buttonColor="blue"
-        cssClasses="mt-5 w-full self-start tablet:w-auto"
-        newTab
-      >
-        View Example Report
-      </Button>
       <div className="mt-5 desktopSmall:grid grid-cols-[1.25fr_1fr] gap-10 desktopSmall:h-[250px]">
         <div className="hidden relative aspect-square rounded-lg overflow-hidden shadow-md min-[600px]:aspect-video desktopSmall:block desktopSmall:aspect-auto">
           <Image
-            src="/assets/images/website-performance-check/3r4twgrerw3r.png"
-            alt="A poor website performance report displayed on a laptop"
+            src="/assets/images/data-capture/4tg2r4rgwte.png"
+            alt="A paper loyalty stamp system at a till counter"
             fill
             className="object-cover"
             sizes="300px"
@@ -115,8 +129,8 @@ const ListItemsComponent = () => {
         </div>
         <div className="relative aspect-square rounded-lg overflow-hidden shadow-md min-[600px]:aspect-video desktopSmall:aspect-auto">
           <Image
-            src="/assets/images/website-performance-check/rwerg089-0j4otgwrb.png"
-            alt="A web designer and client going through a website performance report"
+            src="/assets/images/data-capture/rwh564ehgr.png"
+            alt="A business owner and customer scanning a loyalty QR code at checkout"
             fill
             className="object-cover"
             sizes="(min-width: 1100px) 100vw, 450px"

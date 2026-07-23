@@ -1,6 +1,6 @@
-import AboutComponent from "@/_components/website-performance-check/about-component";
-import ListItemsComponent from "@/_components/website-performance-check/list-items-component";
-import WebsitePerformanceCheckContactForm from "@/_components/forms/website-performace-check-contact-form";
+import AboutComponent from "@/_components/marketing-pages/website-performance-check/about-component";
+import ListItemsComponent from "@/_components/marketing-pages/website-performance-check/list-items-component";
+import WebsitePerformanceCheckContactForm from "@/_components/forms/website-performance-check-contact-form";
 import RecaptchaProvider from "@/_components/recaptcha-provider";
 
 const WebsitePerformanceCheckPage = () => {
