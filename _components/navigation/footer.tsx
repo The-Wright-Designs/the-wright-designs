@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import data from "@/_data/general-data.json";
+import data from "@/_data/nav-data.json";
 import SocialIcons from "@/_lib/social-icons";
 import { normalizeNavUrl } from "@/_utils/normalize-nav-url";
 

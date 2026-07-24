@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 
-import RecentProjectsAppsTable from "@/_components/recent-projects/apps/recent-projects-apps-table";
+import RecentProjectsAppsTable from "@/_components/pages/recent-projects/apps/recent-projects-apps-table";
 
 const RecentProjectsAppsComponent = () => {
   const scrollRef = useRef(null);

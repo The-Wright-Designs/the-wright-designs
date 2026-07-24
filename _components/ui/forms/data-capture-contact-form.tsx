@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import classNames from "classnames";
 
-import Button from "@/_components/button";
+import Button from "@/_components/ui/button";
 import { sendDataCaptureEmail } from "@/_actions/data-capture-actions";
 
 interface Props {
@@ -78,7 +78,10 @@ const DataCaptureContactForm = ({ cssClasses }: Props) => {
         >
           <input type="hidden" name="_honey" className="hidden" />
           <div className="flex flex-col gap-3">
-            <label htmlFor="name" className="text-paragraph font-bold text-beige">
+            <label
+              htmlFor="name"
+              className="text-paragraph font-bold text-beige"
+            >
               Name:
             </label>
             <input

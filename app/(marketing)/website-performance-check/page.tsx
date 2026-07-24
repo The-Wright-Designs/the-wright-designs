@@ -1,6 +1,6 @@
-import AboutComponent from "@/_components/marketing-pages/website-performance-check/about-component";
-import ListItemsComponent from "@/_components/marketing-pages/website-performance-check/list-items-component";
-import WebsitePerformanceCheckContactForm from "@/_components/forms/website-performance-check-contact-form";
+import AboutComponent from "@/_components/pages/marketing/website-performance-check/about-component";
+import ListItemsComponent from "@/_components/pages/marketing/website-performance-check/list-items-component";
+import WebsitePerformanceCheckContactForm from "@/_components/ui/forms/website-performance-check-contact-form";
 import RecaptchaProvider from "@/_components/recaptcha-provider";
 
 const WebsitePerformanceCheckPage = () => {
@@ -11,7 +11,7 @@ const WebsitePerformanceCheckPage = () => {
         <ListItemsComponent />
       </div>
       <RecaptchaProvider>
-        <WebsitePerformanceCheckContactForm cssClasses="-mx-5 px-5 py-10 tablet:-mx-10 tablet:px-10 desktopSmall:mx-0 desktopSmall:rounded-lg desktopSmall:px-7 desktopSmall:py-10 desktopSmall:self-start desktopSmall:sticky desktopSmall:top-40" />
+        <WebsitePerformanceCheckContactForm cssClasses="-mx-5 px-5 py-10 tablet:-mx-10 tablet:px-10 desktopSmall:mx-0 desktopSmall:rounded-lg desktopSmall:px-7 desktopSmall:self-start desktopSmall:sticky desktopSmall:top-40" />
       </RecaptchaProvider>
     </div>
   );

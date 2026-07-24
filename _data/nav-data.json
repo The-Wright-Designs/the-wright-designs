@@ -1,0 +1,36 @@
+{
+  "navigation": [
+    {
+      "title": "Home",
+      "url": "/"
+    },
+    {
+      "title": "About",
+      "url": "about"
+    },
+    {
+      "title": "Services",
+      "url": "services"
+    },
+    {
+      "title": "Recent Projects",
+      "url": "/recent-projects/websites"
+    },
+    {
+      "title": "FAQs",
+      "url": "faqs"
+    },
+    {
+      "title": "Website Check",
+      "url": "/website-performance-check"
+    },
+    {
+      "title": "Data Capture & Loyalty",
+      "url": "/loyalty-and-data-capture-assessment"
+    },
+    {
+      "title": "Contact",
+      "url": "contact"
+    }
+  ]
+}

@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState, Suspense, lazy } from "react";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
-import GeneralContactForm from "@/_components/forms/general-contact-form";
+import GeneralContactForm from "@/_components/ui/forms/general-contact-form";
 import RecaptchaProvider from "@/_components/recaptcha-provider";
 import SocialIcons from "@/_lib/social-icons";
 import { showEmailAddress, showPhoneNumber } from "@/_actions/contact-actions";

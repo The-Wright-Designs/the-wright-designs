@@ -2,7 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import classNames from "classnames";
-import ContactForm from "@/_components/forms/general-contact-form";
+import ContactForm from "@/_components/ui/forms/general-contact-form";
 import RecaptchaProvider from "@/_components/recaptcha-provider";
 import Link from "next/link";
 

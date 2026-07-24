@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import RecentProjectsAppsComponent from "@/_components/recent-projects/apps/recent-projects-apps-component";
+import RecentProjectsAppsComponent from "@/_components/pages/recent-projects/apps/recent-projects-apps-component";
 
 export const metadata: Metadata = {
   title: "Recent App Projects",

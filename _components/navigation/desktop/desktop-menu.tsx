@@ -1,7 +1,7 @@
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 
-import data from "@/_data/general-data.json";
+import data from "@/_data/nav-data.json";
 import classNames from "classnames";
 import { normalizeNavUrl } from "@/_utils/normalize-nav-url";
 
@@ -16,7 +16,10 @@ const DesktopMenu = ({ cssClasses }: Props) => {
 
   return (
     <nav
-      className={classNames("hidden tablet:block ease-in-out duration-300", cssClasses)}
+      className={classNames(
+        "hidden desktopSmall:block ease-in-out duration-300",
+        cssClasses,
+      )}
     >
       <ul className="flex gap-4 font-thin text-paragraph">
         {navigation.map((item, index) => (

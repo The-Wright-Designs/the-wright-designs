@@ -30,18 +30,18 @@ const Header = () => {
   return (
     <header
       className={classNames(
-        "sticky h-[104px] w-full bg-blue border-b-4 border-b-beige shadow-md z-20 ease-in-out duration-300 tablet:px-10 flex items-center",
+        "sticky h-[104px] w-full bg-blue border-b-4 border-b-beige shadow-md z-20 ease-in-out duration-300 desktopSmall:px-10 flex items-center",
         {
           "-top-4": isScrolled,
           "top-0": !isScrolled,
         },
       )}
     >
-      <div className="w-full desktop:max-w-[1280px] desktop:m-auto tablet:flex tablet:justify-between tablet:items-end">
+      <div className="w-full desktop:max-w-[1280px] desktop:m-auto desktopSmall:flex desktopSmall:justify-between desktopSmall:items-end">
         <div>
           <div
             className={classNames(
-              "flex justify-between items-center px-5 tablet:px-0 ease-in-out duration-300",
+              "flex justify-between items-center px-5 desktopSmall:px-0 ease-in-out duration-300",
               {
                 "translate-y-2": isScrolled,
               },
@@ -66,13 +66,12 @@ const Header = () => {
             <MenuButton
               onClick={() => setShowMenuToggle(!showMenuToggle)}
               showMenuToggle={showMenuToggle}
-              cssClasses="tablet:hidden"
             />
           </div>
           <MobileMenuToggle
             onClick={() => setShowMenuToggle(false)}
             cssClasses={classNames(
-              "fixed z-50 w-full h-screen px-5 bg-blue ease-in-out duration-500 tablet:hidden",
+              "fixed z-50 w-full h-screen px-5 bg-blue ease-in-out duration-500 desktopSmall:hidden",
               {
                 "translate-x-0": showMenuToggle,
                 "translate-x-full": !showMenuToggle,

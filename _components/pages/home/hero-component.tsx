@@ -3,7 +3,7 @@ import Image from "next/image";
 import classNames from "classnames";
 
 import HeroSlideshow from "@/_lib/hero-slideshow";
-import GoogleRatingComponent from "@/_components/reviews/google-rating-component";
+import GoogleRatingComponent from "@/_components/ui/reviews/google-rating-component";
 
 interface Props {
   cssClasses?: string;

@@ -6,10 +6,10 @@ import Image from "next/image";
 
 import classNames from "classnames";
 
-import RecentProjectsWebsiteScroller from "@/_components/recent-projects/websites/recent-projects-website-scroller";
+import RecentProjectsWebsiteScroller from "@/_components/pages/recent-projects/websites/recent-projects-website-scroller";
 
 import technicalList from "@/_data/technical-data.json";
-import Button from "@/_components/button";
+import Button from "@/_components/ui/button";
 
 const blankPhones = [
   "/assets/images/phone-rose-gold.png",

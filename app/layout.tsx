@@ -3,8 +3,8 @@ import { Roboto } from "next/font/google";
 
 import Footer from "@/_components/navigation/footer";
 import Header from "@/_components/navigation/header";
-import FacebookPixel from "@/_components/facebook-pixel";
-import GoogleAds from "@/_components/google-ads";
+import FacebookPixel from "@/_components/ad-tracking/facebook-pixel";
+import GoogleAds from "@/_components/ad-tracking/google-ads";
 
 import "@/_styles/globals.css";
 
