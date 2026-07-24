@@ -6,6 +6,10 @@ import classNames from "classnames";
 
 import Button from "@/_components/ui/button";
 import { sendEmail } from "@/_actions/send-general-email-actions";
+import {
+  META_PIXEL_EVENTS,
+  trackMetaEvent,
+} from "@/_utils/meta-pixel-events";
 
 interface Props {
   cssClasses?: string;
@@ -63,9 +67,7 @@ const GeneralContactForm = ({ cssClasses }: Props) => {
               setSubmitError(result?.error ?? "send");
               return;
             }
-            if (typeof window !== "undefined" && window.fbq) {
-              window.fbq("track", "Lead");
-            }
+            trackMetaEvent("Lead", META_PIXEL_EVENTS.generalEnquiry);
             if (typeof window !== "undefined" && window.gtag) {
               window.gtag("event", "conversion", {
                 send_to: "AW-XXXXXXX/XXXX",

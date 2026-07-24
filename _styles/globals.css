@@ -20,6 +20,20 @@
     --font-roboto: var(--font-roboto), Tahoma, sans-serif;
 
     --spacing-15: 60px;
+
+    --animate-pulse-scale: pulse-scale 2.5s ease-in-out infinite;
+
+    @keyframes pulse-scale {
+
+        0%,
+        100% {
+            transform: scale(1);
+        }
+
+        50% {
+            transform: scale(1.10);
+        }
+    }
 }
 
 @utility text-paragraph {

@@ -8,6 +8,7 @@ import GeneralContactForm from "@/_components/ui/forms/general-contact-form";
 import RecaptchaProvider from "@/_components/recaptcha-provider";
 import SocialIcons from "@/_lib/social-icons";
 import { showEmailAddress, showPhoneNumber } from "@/_actions/contact-actions";
+import { META_PIXEL_EVENTS, trackMetaEvent } from "@/_utils/meta-pixel-events";
 
 import data from "@/_data/general-data.json";
 
@@ -33,9 +34,7 @@ const ContactInnerComponent = () => {
     const phoneNumber = await showPhoneNumber(token);
     if (phoneNumber) {
       setShowPhone(phoneNumber);
-      if (typeof window !== "undefined" && window.fbq) {
-        window.fbq("track", "Contact");
-      }
+      trackMetaEvent("Contact", META_PIXEL_EVENTS.phoneReveal);
     } else {
       setPhoneError(true);
     }
@@ -49,9 +48,7 @@ const ContactInnerComponent = () => {
     const emailAddress = await showEmailAddress(token);
     if (emailAddress) {
       setShowEmail(emailAddress);
-      if (typeof window !== "undefined" && window.fbq) {
-        window.fbq("track", "Contact");
-      }
+      trackMetaEvent("Contact", META_PIXEL_EVENTS.emailReveal);
     } else {
       setEmailError(true);
     }

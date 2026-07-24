@@ -6,6 +6,10 @@ import classNames from "classnames";
 
 import Button from "@/_components/ui/button";
 import { sendPerformanceCheckEmail } from "@/_actions/website-performance-check-actions";
+import {
+  META_PIXEL_EVENTS,
+  trackMetaEvent,
+} from "@/_utils/meta-pixel-events";
 
 interface Props {
   cssClasses?: string;
@@ -64,9 +68,7 @@ const WebsitePerformanceCheckContactForm = ({ cssClasses }: Props) => {
               setSubmitError(result?.error ?? "send");
               return;
             }
-            if (typeof window !== "undefined" && window.fbq) {
-              window.fbq("track", "Lead");
-            }
+            trackMetaEvent("Lead", META_PIXEL_EVENTS.performanceCheck);
             if (typeof window !== "undefined" && window.gtag) {
               window.gtag("event", "conversion", {
                 send_to: "AW-XXXXXXX/XXXX",
