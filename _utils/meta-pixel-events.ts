@@ -4,7 +4,8 @@
 // to us, not a real rand amount:
 //   1500 — landing page forms (highest intent: read the pitch, then enquired)
 //   1000 — general homepage enquiry
-//    250 — revealed a phone number or email address (may never make contact)
+//    750 — clicked through to WhatsApp (opens a real conversation)
+//    500 — revealed a phone number or email address (may never make contact)
 //
 // Meta only uses these to rank conversions against each other, so what matters
 // is the ratios, not the absolute figures. Keep the ordering intact when
@@ -55,6 +56,12 @@ export const META_PIXEL_EVENTS = {
     value: 500,
     currency: CURRENCY,
     content_name: "Email Address Reveal",
+    content_category: "Contact Detail Reveal",
+  },
+  whatsAppClick: {
+    value: 750,
+    currency: CURRENCY,
+    content_name: "WhatsApp Click",
     content_category: "Contact Detail Reveal",
   },
 } as const satisfies Record<string, MetaPixelEventParams>;
