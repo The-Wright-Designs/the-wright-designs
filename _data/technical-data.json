@@ -7,7 +7,7 @@
         "image": {
           "mobile": "/assets/images/screenshots/bombay-bites-mobile.png",
           "desktop": "/assets/images/screenshots/bombay-bites-desktop.png",
-          "scrollImage": "/assets/images/screenshots/bombay-bites-mobile.png"
+          "scrollImage": "/assets/images/screenshots/bombay-bites-mobile-long.png"
         }
       },
       {
@@ -16,7 +16,7 @@
         "image": {
           "mobile": "/assets/images/screenshots/bay-sauna-mobile.png",
           "desktop": "/assets/images/screenshots/bay-sauna-desktop.png",
-          "scrollImage": "/assets/images/screenshots/bay-sauna-mobile.png"
+          "scrollImage": "/assets/images/screenshots/bay-sauna-mobile-long.png"
         }
       },
       {
@@ -25,7 +25,7 @@
         "image": {
           "mobile": "/assets/images/screenshots/exos-mobile.png",
           "desktop": "/assets/images/screenshots/exos-desktop.png",
-          "scrollImage": "/assets/images/screenshots/exos-mobile.png"
+          "scrollImage": "/assets/images/screenshots/exos-mobile-long.png"
         }
       },
       {
