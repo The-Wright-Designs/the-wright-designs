@@ -2,6 +2,33 @@
   "projectsList": {
     "websites": [
       {
+        "title": "Bombay Bites",
+        "url": "https://bombaybites.co.za",
+        "image": {
+          "mobile": "/assets/images/screenshots/bombay-bites-mobile.png",
+          "desktop": "/assets/images/screenshots/bombay-bites-desktop.png",
+          "scrollImage": "/assets/images/screenshots/bombay-bites-mobile.png"
+        }
+      },
+      {
+        "title": "Bay Sauna",
+        "url": "https://baysauna.co.za",
+        "image": {
+          "mobile": "/assets/images/screenshots/bay-sauna-mobile.png",
+          "desktop": "/assets/images/screenshots/bay-sauna-desktop.png",
+          "scrollImage": "/assets/images/screenshots/bay-sauna-mobile.png"
+        }
+      },
+      {
+        "title": "EXOS",
+        "url": "https://exos.global",
+        "image": {
+          "mobile": "/assets/images/screenshots/exos-mobile.png",
+          "desktop": "/assets/images/screenshots/exos-desktop.png",
+          "scrollImage": "/assets/images/screenshots/exos-mobile.png"
+        }
+      },
+      {
         "title": "Natural Highs Clone Vault",
         "url": "https://www.naturalhighs.co.za",
         "image": {
