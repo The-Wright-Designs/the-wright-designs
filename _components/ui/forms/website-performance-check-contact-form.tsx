@@ -51,7 +51,8 @@ const WebsitePerformanceCheckContactForm = ({ cssClasses }: Props) => {
         <>
           <div id="email-submitted"></div>
           <p className="text-beige mb-6 text-[18px]">
-            Thanks for your message! We will get back to you ASAP...
+            Thank you for your website performance check enquiry! Our team lead,
+            Chad, will be in touch with you within 24hrs.
           </p>
         </>
       )}

@@ -96,9 +96,14 @@ const RecentProjectsAppsTable = () => {
                   {year}
                 </p>
                 <p
-                  className={classNames("text-left", rowItemBorders, rowItemSpacing, {
-                    "text-white": index % 2 !== 0,
-                  })}
+                  className={classNames(
+                    "text-left",
+                    rowItemBorders,
+                    rowItemSpacing,
+                    {
+                      "text-white": index % 2 !== 0,
+                    },
+                  )}
                 >
                   {status}
                 </p>

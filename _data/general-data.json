@@ -31,6 +31,16 @@
   ],
   "ourClients": [
     {
+      "src": "/assets/images/our-clients/bombay-bites-logo.png",
+      "alt": "Bombay Bites logo",
+      "url": "https://bombaybites.co.za/"
+    },
+    {
+      "src": "/assets/images/our-clients/bay-sauna-logo.png",
+      "alt": "Bay Sauna logo",
+      "url": "https://baysauna.co.za/"
+    },
+    {
       "src": "/assets/images/our-clients/natural-highs-clone-vault-logo.png",
       "alt": "Natural Highs Clone Vault logo",
       "url": "https://www.naturalhighs.co.za/"
@@ -39,6 +49,11 @@
       "src": "/assets/images/our-clients/the-sentinel-logo.png",
       "alt": "The Sentinel News logo",
       "url": "https://www.sentinelnews.com.au/"
+    },
+    {
+      "src": "/assets/images/our-clients/smhart-security-logo.png",
+      "alt": "Smhart Security logo",
+      "url": "https://smhart.co.za/"
     },
     {
       "src": "/assets/images/our-clients/cross.png",

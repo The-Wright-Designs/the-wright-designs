@@ -256,11 +256,19 @@
     ],
     "apps": [
       {
+        "client": "Smhart Security",
+        "title": "Local treasure hunt app for teens",
+        "description": "A community-driven treasure hunt platform for teens, where a new location-based hunt opens every week. Participants solve map-pinned clues to win a cash prize. With built-in safety tips, live announcements and one-tap emergency contacts, teens are kept informed and are able to connect with safety services quickly. An automated system handles hunt scheduling, winner selection and notifications, running the entire weekly competition with very little manual input.",
+        "year": 2026,
+        "status": "In development",
+        "image": "/assets/images/our-clients/smhart-security-logo.png"
+      },
+      {
         "client": "Carevita",
         "title": "D3 - Retirement resident management app",
         "description": "A centralised platform that eliminated paper-based records for 100+ staff across multiple retirement facilities nationwide. The app enables efficient resident management, including health notes, meal plans, and document access, significantly improving operational efficiency and information accessibility for care teams.",
         "year": 2025,
-        "status": "Phase 1/3 complete",
+        "status": "Ongoing",
         "image": "/assets/images/our-clients/carevita-logo.png"
       },
       {
